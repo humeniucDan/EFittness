@@ -1,0 +1,28 @@
+DB Design:
+	UserAuth:
+		- id (same as in UserData): bigint
+		- password (hashed) : string
+	UserData:
+		- id (same as in UserAuth): bigint 
+		- firstName: string
+		- lastName: string
+		- isTrainer: bool
+		- joined: date
+		- weightHistory: arr({weigthAt: date, dateAt: date})
+		- 
+	Exercice:
+		- id: bigint
+		- name : string
+		- execution (link or smth to how to do it correctly): string
+		- musclesWorked (represent muscles with codes or maybe follow some sort of medical categorisation): arr(int)
+		- exerciceType (probably best reprezented with codes as well in order to indicate what is needed to perform, machines, cables, weights, nothing): int
+	Muscle: 
+		- id: bigint
+		- name: string
+		- moreInfo (link to some medical resources): string
+	Foods: (the bigger the better)
+		- id: bigint
+		- name: string
+		- protein: int
+		- carbs: int
+		- fats: int
