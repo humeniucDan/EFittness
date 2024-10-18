@@ -9,7 +9,8 @@ DB Design:
 		- isTrainer: bool
 		- joined: date
 		- weightHistory: arr({weigthAt: date, dateAt: date})
-		- 
+		- height (debatable if it should be an array or a single value): arr(int)
+		- bmi : float
 	Exercice:
 		- id: bigint
 		- name : string
