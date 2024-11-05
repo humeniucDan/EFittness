@@ -1,0 +1,8 @@
+Could have: save page state when channging tabs
+
+- Home Page: ?????  
+- User Page: Data about users (also have functionality to be/become trainer and have acces to the trainer tab)
+- Tracker Page: History about user and show goals (should be able to expand to see workout 
+- Planner Page: Plan a workout program (mannualy/automatically/import/fromTrainer)
+- Tariner Page: check clients status / 
+- Gym Map Page: idk mayybe separate microservice

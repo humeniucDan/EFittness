@@ -1,0 +1,48 @@
+warning: attempting to set builtin-baseline in vcpkg.json while overriding the default-registry in vcpkg-configuration.json.
+the default-registry from vcpkg-configuration.json will be used.
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
+All requested packages are currently installed.
+Total install time: 1.1 us
+asio provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(asio CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE asio::asio)
+
+cppzmq provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(cppzmq CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE cppzmq cppzmq-static)
+
+cppzmq provides pkg-config modules:
+
+  # C++ binding for libzmq
+  cppzmq
+
+crow provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(Crow CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE Crow::Crow asio::asio)
+
+libpqxx provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(libpqxx CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE libpqxx::pqxx)
+
+libpqxx provides pkg-config modules:
+
+  # C++ client API for the PostgreSQL database management system.
+  libpqxx
+
+mongo-cxx-driver provides CMake targets:
+
+    find_package(bsoncxx CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:mongo::bsoncxx_static>,mongo::bsoncxx_static,mongo::bsoncxx_shared>)
+
+    find_package(mongocxx CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:mongo::mongocxx_static>,mongo::mongocxx_static,mongo::mongocxx_shared>)
+
