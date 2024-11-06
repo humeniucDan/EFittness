@@ -12,7 +12,8 @@
 
 #include <zmq.hpp>
 
-void startConsuming();
+//void startConsuming();
+int consume();
 int produce();
 
 #endif //USERAUTH_ZEROMQ_H

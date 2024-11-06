@@ -16,13 +16,27 @@
 // TODO: coming soon
 
 #include "zeromq/zeromq.h"
+#include "crow/routes.h"
+#include <thread>
+#include <crow.h>
+#include <crow/middlewares/cookie_parser.h>
+#include <crow/middlewares/session.h>
 
 int main() {
-    startConsuming();
+//    startConsuming();
 
-    for(int i = 0; i < 3; i++){
-        produce();
-    }
+    using Session = crow::SessionMiddleware<crow::FileStore>;
+
+    crow::App<crow::CookieParser, Session> app{Session{
+            crow::FileStore{"/tmp/sessiondata"}
+    }};
+
+    std::thread t{consume};
+
+    startRoutes(app);
+
+    //set the port, set the app to run on multiple threads, and run the app
+    app.port(18080).multithreaded().run();
 
     return 0;
 }

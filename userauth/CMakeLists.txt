@@ -21,6 +21,8 @@ add_executable(userauth
         zeromq/zeromq.cpp
         zeromq/zeromq.h
         zeromq/zeromq.h
+        crow/routes.h
+        crow/routes.cpp
 )
 
 target_link_libraries(userauth PRIVATE Crow::Crow asio::asio)
