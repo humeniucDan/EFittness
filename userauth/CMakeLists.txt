@@ -23,6 +23,14 @@ add_executable(userauth
         zeromq/zeromq.h
         crow/routes.h
         crow/routes.cpp
+        login/login.h
+        models/UserAuth/UserAuth.cpp
+        models/UserAuth/UserAuth.h
+        mongodb/UserAuthRepo/userauthRepo.h
+        mongodb/UserAuthRepo/userauthRepo.h
+        mongodb/UserAuthRepo/userauthRepo.cpp
+        mongodb/connectionlogic/connectionlogic.h
+        mongodb/connectionlogic/connectionlogic.cpp
 )
 
 target_link_libraries(userauth PRIVATE Crow::Crow asio::asio)

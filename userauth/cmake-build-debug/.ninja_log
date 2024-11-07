@@ -1,10 +1,5 @@
 # ninja log v5
-0	1297	7526197469610128	CMakeFiles/userauth.dir/main.cpp.obj	5c90ca130dc7a616
-1365	1784	7526197471238937	userauth.exe	412199481d1656f0
-4	1365	7526197470265285	CMakeFiles/userauth.dir/zeromq/zeromq.cpp.obj	49b31fdeb24b399c
-4	1709	7526234293986197	CMakeFiles/userauth.dir/zeromq/zeromq.cpp.obj	49b31fdeb24b399c
-8	5758	7526234334428129	CMakeFiles/userauth.dir/crow/routes.cpp.obj	c8386c33fc431ea0
 0	6543	7526234342234498	CMakeFiles/userauth.dir/main.cpp.obj	5c90ca130dc7a616
-6543	7233	7526234344442232	userauth.exe	553a76888f5eb301
-3	1335	7526236076939118	CMakeFiles/userauth.dir/zeromq/zeromq.cpp.obj	49b31fdeb24b399c
+8	5758	7526234334428129	CMakeFiles/userauth.dir/crow/routes.cpp.obj	c8386c33fc431ea0
 1336	1791	7526236078203336	userauth.exe	553a76888f5eb301
+3	1335	7526236076939118	CMakeFiles/userauth.dir/zeromq/zeromq.cpp.obj	49b31fdeb24b399c

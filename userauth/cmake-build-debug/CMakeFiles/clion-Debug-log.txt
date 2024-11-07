@@ -5,7 +5,7 @@ the default-registry from vcpkg-configuration.json will be used.
 Detecting compiler hash for triplet x64-windows...
 Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
 All requested packages are currently installed.
-Total install time: 1.5 us
+Total install time: 1.1 us
 asio provides CMake targets:
 
   # this is heuristically generated, and may not be correct
@@ -49,6 +49,6 @@ mongo-cxx-driver provides CMake targets:
     target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:mongo::mongocxx_static>,mongo::mongocxx_static,mongo::mongocxx_shared>)
 
 -- Running vcpkg install - done
--- Configuring done (3.1s)
+-- Configuring done (2.6s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug
