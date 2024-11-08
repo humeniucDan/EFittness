@@ -17,7 +17,7 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
             ([](const crow::request& req){
 //                std::string token;
 //                try {
-////                    token = login();
+//                    token = login();
 //                } catch (int e) {
 //                    switch (e) {
 //                        case 1:
@@ -32,7 +32,16 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 
     CROW_ROUTE(app, "/signup").methods("POST"_method)
             ([](const crow::request& req){
-                getUserAuthByEmail("email");
+                try {
+                    UserAuth curUser = getUserAuthByEmail("ana@mail.com");
+                    std::cout <<
+                        curUser.getId() << " " <<
+                        curUser.getEmail() << " " <<
+                        curUser.getPassword() <<
+                        "\n";
+                } catch (nlohmann::json::parse_error &e) {
+                    std::cout << "JSON parsing error: " << e.what() << std::endl;
+                }
                 return crow::response(200, "Hello!");
             });
 }

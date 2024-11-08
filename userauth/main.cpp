@@ -29,6 +29,7 @@
 int main() {
 //    startConsuming();
 
+    // TODO: REFACTOR IN A SINGLETON PATTERN
     mongocxx::instance inst{};
 
     using Session = crow::SessionMiddleware<crow::FileStore>;

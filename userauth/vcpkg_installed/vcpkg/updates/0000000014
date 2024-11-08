@@ -1,8 +1,0 @@
-Package: utf8proc
-Version: 2.9.0
-Depends: vcpkg-cmake, vcpkg-cmake-config
-Architecture: x64-windows
-Multi-Arch: same
-Abi: d0118f0ff68152d11737859ceb8fe858deb65f62a2c95d7421295c55a4f599b5
-Description: Clean C library for processing UTF-8 Unicode data.
-Status: install ok half-installed

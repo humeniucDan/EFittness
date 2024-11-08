@@ -1,0 +1,96 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 1b9045d7eca55a9ce32e8f2bfa319144678ff1dcf8a6e59c2db6add3b255ecde
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d8e081f321ba5c9c3aaecf01a9f73b538531362a0de801ea947ba20f8a93f107
+Status: install ok installed
+
+Package: asio
+Version: 1.31.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 55f5fa491c7f56c2653c04e558c577cc07c5f899745bd2b36856b63c2a64e88a
+Description: Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
+Status: install ok installed
+
+Package: zeromq
+Version: 4.3.5
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0db50641c25b4da1457c58bf503f3b2fbbebb14d7fbecc6b3761e71a2c6f7f87
+Description: The ZeroMQ lightweight messaging kernel is a library which extends the standard socket interfaces with features traditionally provided by specialised messaging middleware products
+Status: install ok installed
+
+Package: cppzmq
+Version: 4.10.0
+Depends: vcpkg-cmake, vcpkg-cmake-config, zeromq
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f0e03ca82414782a13766e1e4092c9abb2e8f7c5ec7f0e86fad5156bc7bde5a4
+Description: Header-only C++ binding for ZeroMQ
+Status: install ok installed
+
+Package: crow
+Version: 1.2.0
+Depends: asio, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b4c2db6de4e8614203ac79d41d55c27ec36364615cb468a4470eacf926240d4f
+Description: Very fast and easy to use C++ micro web framework
+Status: install ok installed
+
+Package: zlib
+Version: 1.3.1
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4e644c0b67d5a9e47cd6fa0e00c4db715fd67c3fe0dec056e91775f55978e4cd
+Description: A compression library
+Status: install ok installed
+
+Package: utf8proc
+Version: 2.9.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d0118f0ff68152d11737859ceb8fe858deb65f62a2c95d7421295c55a4f599b5
+Description: Clean C library for processing UTF-8 Unicode data.
+Status: install ok installed
+
+Package: libbson
+Version: 1.28.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3a04bb7dbdc41cd8e423f4d6b090d91ca23c64048f076a0577d559c5ebc475fb
+Description: libbson is a library providing useful routines related to building, parsing, and iterating BSON documents.
+Status: install ok installed
+
+Package: mongo-c-driver
+Version: 1.28.0
+Depends: libbson, utf8proc, vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ad70ab13ead2630efe3daea520e4a86f8c794b8e6d4a14bbfa758cf1de8f4c87
+Description: Client library written in C for MongoDB.
+Status: install ok installed
+
+Package: mongo-cxx-driver
+Version: 3.11.0
+Depends: libbson, mongo-c-driver, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b05176db77b1c3fc105f3c1f7b2ef3147d9fac5d8d9a57b648be59d408115ddb
+Description: MongoDB C++ Driver.
+Status: install ok installed
+
