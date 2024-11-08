@@ -1,0 +1,9 @@
+MAP: jwt = un token de auth care v-a trebuii pastrat de FE si atasat fiecarui request care acceseasa o resursa cu "caracter personal" incluziv date de greutate, workout history, etc
+
+- rsp la login v-a fi: 
+	SUCCESS ->  jwt valid si cod 200
+	FAIL -> un cod de err corespunzator cat si un mesaj intuitiv de tipul: "User not found" , "Password incorect", etc
+
+- rsp la signup v-a fi:
+	 SUCCESS ->	jwt valid si cod 200, ar trb sa redirectioneze spre personalized home page
+	FAIL -> un cod de err corespunzator cat si un mesaj intuitiv de tipul: "Email already in use", etc

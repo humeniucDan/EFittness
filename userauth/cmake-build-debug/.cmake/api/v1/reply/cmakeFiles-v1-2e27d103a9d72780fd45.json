@@ -1,0 +1,452 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Users/koath/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/MSVC-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/MSVC.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-MSVC-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-MSVC.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/MSVC-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/MSVC.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-MSVC-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-MSVC.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/crow/CrowConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/crow/Findasio.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/crow/CrowTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bsoncxx/bsoncxx-config-version.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bsoncxx/bsoncxx-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson-1.0-config-version.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson-1.0-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson-targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson_shared-targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson_shared-targets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson_shared-targets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bsoncxx/bsoncxx_targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bsoncxx/bsoncxx_targets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bsoncxx/bsoncxx_targets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongocxx/mongocxx-config-version.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongocxx/mongocxx-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongoc-1.0/mongoc-1.0-config-version.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongoc-1.0/mongoc-1.0-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson-1.0-config-version.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson-1.0-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson-targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bson-1.0/bson_shared-targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/unofficial-utf8proc/unofficial-utf8proc-config.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/unofficial-utf8proc/unofficial-utf8proc-config-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/unofficial-utf8proc/unofficial-utf8proc-config-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongoc-1.0/mongoc-targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongoc-1.0/mongoc-targets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongoc-1.0/mongoc-targets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bsoncxx/bsoncxx-config-version.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bsoncxx/bsoncxx-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/bsoncxx/bsoncxx_targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongocxx/mongocxx_targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongocxx/mongocxx_targets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/mongocxx/mongocxx_targets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/cppzmq/cppzmqConfigVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/cppzmq/cppzmqConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/cLion/CLion 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/zeromq/vcpkg-cmake-wrapper.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/zeromq/ZeroMQConfigVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/zeromq/ZeroMQConfig.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/zeromq/ZeroMQTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/zeromq/ZeroMQTargets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/zeromq/ZeroMQTargets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/vcpkg_installed/x64-windows/share/cppzmq/cppzmqTargets.cmake"
+		},
+		{
+			"path" : "vcpkg.json"
+		},
+		{
+			"path" : "vcpkg-configuration.json"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug",
+		"source" : "C:/UTCN/an3/sem1/is/proj/userauth"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

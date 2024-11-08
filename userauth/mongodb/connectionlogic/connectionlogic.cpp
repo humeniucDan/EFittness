@@ -2,25 +2,25 @@
 // Created by koath on 11/7/2024.
 //
 
-#include <mongocxx/client.hpp>
-#include <mongocxx/instance.hpp>
-#include <bsoncxx/json.hpp>
-#include <bsoncxx/builder/stream/document.hpp>
+#include "connectionlogic.h"
 
 mongocxx::client getMongodbConnection(){
+    // TODO: refactor connection uri in a env variables file
+
     try {
-        // Create an instance.
-        mongocxx::instance inst{};
-        const auto uri = mongocxx::uri{
-                "mongodb+srv://koathbaht:5h5GdgcDT6bPgvNI\@gocluster1.uttkkqw.mongodb.net/?retryWrites=true&w=majority&appName=GoCluster1"};
-        // Set the version of the Stable API on the client
+        // TODO: create a MongoInstance singleton instead of a global variable
+        const auto uri = mongocxx::uri{ "mongodb+srv://koathbaht:changeme@cluster0.acsi7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"};
+
         mongocxx::options::client client_options;
         const auto api = mongocxx::options::server_api{mongocxx::options::server_api::version::k_version_1};
         client_options.server_api_opts(api);
-        // Setup the connection and get a handle on the "admin" database.
+
         mongocxx::client conn{uri, client_options};
+
+        return conn;
     } catch (const std::exception& e)
     {
-        // Handle errors
+//         TODO: Handle errors
+        std::cout << e.what() << "\n";
     }
 }

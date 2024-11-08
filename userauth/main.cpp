@@ -10,20 +10,26 @@
 //      - has to implement some kind of "std::string toJson()" to be able to be sent to
 //      - has to be to be usable in some sort of general repository that takes a POMI as a generic
 //      - has to be able to be cont constructed form a 'database row' or a JSON string; thus need to implement either as a init func:
-//          - "T formRow(dbRow row)" or as a overloaded constructor
-//          - "T formJson(std::string json)" or as a overloaded constructor
+//          - "T fromRow(dbRow row)" or as a overloaded constructor
+//          - "T fromJson(std::string json)" or as a overloaded constructor
 
 // TODO: coming soon
 
 #include "zeromq/zeromq.h"
 #include "crow/routes.h"
+
 #include <thread>
+
 #include <crow.h>
 #include <crow/middlewares/cookie_parser.h>
 #include <crow/middlewares/session.h>
 
+#include "mongocxx/instance.hpp"
+
 int main() {
 //    startConsuming();
+
+    mongocxx::instance inst{};
 
     using Session = crow::SessionMiddleware<crow::FileStore>;
 

@@ -309,7 +309,7 @@ bsoncxx_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_insta
 cppzmq_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/cppzmq
 
 //The directory containing a CMake configuration file for libpqxx.
-libpqxx_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/libpqxx
+libpqxx_DIR:PATH=libpqxx_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for mongoc-1.0.
 mongoc-1.0_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/mongoc-1.0

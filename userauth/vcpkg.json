@@ -2,26 +2,25 @@
   "name" : "userauth",
   "version-string" : "1.0.0",
   "builtin-baseline" : "52fc0d8c1e2cbd12c9907284566f5c17e5ef0d12",
-  "dependencies" : [ {
-    "name" : "asio",
-    "version>=" : "1.31.0"
-  }, {
-    "name" : "crow",
-    "version>=" : "1.2.0"
-  }, {
-    "name" : "mongo-cxx-driver",
-    "version>=" : "3.11.0"
-  }, {
-    "name" : "vcpkg-cmake",
-    "version>=" : "2024-04-23"
-  }, {
-    "name" : "vcpkg-cmake-config",
-    "version>=" : "2024-05-23"
-  }, {
-    "name" : "cppzmq",
-    "version>=" : "4.10.0"
-  }, {
-    "name" : "libpqxx",
-    "version>=" : "7.9.2"
-  } ]
+  "dependencies" : [
+    {
+      "name" : "asio",
+      "version>=" : "1.31.0"
+    }, {
+      "name" : "crow",
+      "version>=" : "1.2.0"
+    }, {
+      "name" : "mongo-cxx-driver",
+      "version>=" : "3.11.0"
+    }, {
+      "name" : "vcpkg-cmake",
+      "version>=" : "2024-04-23"
+    }, {
+      "name" : "vcpkg-cmake-config",
+      "version>=" : "2024-05-23"
+    }, {
+      "name" : "cppzmq",
+      "version>=" : "4.10.0"
+    }
+  ]
 }

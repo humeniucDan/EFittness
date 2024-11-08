@@ -64,7 +64,7 @@ Depends: vcpkg-cmake
 Architecture: x64-windows
 Multi-Arch: same
 Abi: 5ca5afcc37e6561c9c7bf5199ca77478d5384df93e6b6f194c3c4553a56777e3
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: openssl
 Version: 3.3.2
@@ -74,7 +74,7 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: 42967b501d741c081c9ef5a52d66d75929e85c9d9fc6a4490187af0171379345
 Description: OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: lz4
 Version: 1.10.0
@@ -83,7 +83,7 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: db6d8a99d5d1ec0fa04a3300fed42322fadd3f4fb31141b2a0a8c849f0d462d6
 Description: Lossless compression algorithm, providing compression speed at 400 MB/s per core.
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: vcpkg-tool-meson
 Version: 1.5.2
@@ -92,7 +92,7 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: 08845cde10f659c9b93a01444336b01a9c51a5788f02a25c2a2bcdac2b2ac5a1
 Description: Meson build system
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: pkgconf
 Version: 2.3.0
@@ -101,7 +101,7 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: 9ff07138d83cdadc077faf63c01d6c5a35eb040fbccff6fd8667d8a467d65fcd
 Description: pkgconf is a program which helps to configure compiler and linker flags for development libraries. It is similar to pkg-config from freedesktop.org.
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: vcpkg-pkgconfig-get-modules
 Version: 2024-04-03
@@ -109,7 +109,7 @@ Depends: pkgconf
 Architecture: x64-windows
 Multi-Arch: same
 Abi: f0e27ba88d5773f21af55c9fec67115531af425847848d437ccb03bff3bdbc6c
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: libpq
 Version: 16.4
@@ -119,7 +119,7 @@ Multi-Arch: same
 Abi: 1e15a5c543a55d0097a5b57d747929a7d6c34b16b19d8b818bea7841dace990d
 Description: The official database access API of postgresql
 Default-Features: lz4, openssl, zlib
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: libpq
 Feature: lz4
@@ -127,7 +127,7 @@ Depends: lz4
 Architecture: x64-windows
 Multi-Arch: same
 Description: Use lz4
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: libpq
 Feature: openssl
@@ -135,7 +135,7 @@ Depends: openssl
 Architecture: x64-windows
 Multi-Arch: same
 Description: support for encrypted client connections and random number generation on platforms that do not have "/dev/urandom" (except windows)
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: libpq
 Feature: zlib
@@ -143,7 +143,7 @@ Depends: zlib
 Architecture: x64-windows
 Multi-Arch: same
 Description: Use zlib
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: libpqxx
 Version: 7.9.2
@@ -152,7 +152,7 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: 9480e316c9145c323ecf4224fef67aafc6bb2f4b8052f15bff9410ff94260ce3
 Description: The official C++ client API for PostgreSQL
-Status: install ok installed
+Status: purge ok not-installed
 
 Package: utf8proc
 Version: 2.9.0

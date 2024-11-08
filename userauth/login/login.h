@@ -7,7 +7,7 @@
 
 #include <string>
 
-std::string login();
-std::string signup();
+//std::string login();
+//std::string signup();
 
 #endif //USERAUTH_LOIGN_H
