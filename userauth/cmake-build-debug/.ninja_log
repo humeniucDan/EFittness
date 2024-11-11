@@ -11,3 +11,10 @@
 11	2522	7528072914955500	CMakeFiles/userauth.dir/jsonwebtoken/jwtlogic/jwtlogic.cpp.obj	f495c71993e8a2c1
 6	2700	7528072916730786	CMakeFiles/userauth.dir/models/UserAuth/UserAuth.cpp.obj	338ac49c72f274c4
 2700	3560	7528072919892748	userauth.exe	ed51e6e298be3ff4
+11	2547	7530172603980194	CMakeFiles/userauth.dir/jsonwebtoken/jwtlogic/jwtlogic.cpp.obj	f495c71993e8a2c1
+6	6286	7530172641282444	CMakeFiles/userauth.dir/crow/routes.cpp.obj	fa22511e049d0368
+6286	7328	7530172644706685	userauth.exe	ed51e6e298be3ff4
+6	6410	7530176830782833	CMakeFiles/userauth.dir/crow/routes.cpp.obj	fa22511e049d0368
+6411	7095	7530176832677687	userauth.exe	ed51e6e298be3ff4
+6	6866	7530177802882024	CMakeFiles/userauth.dir/crow/routes.cpp.obj	fa22511e049d0368
+6866	7526	7530177804643543	userauth.exe	ed51e6e298be3ff4
