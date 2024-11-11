@@ -13,6 +13,8 @@ find_package(Crow CONFIG REQUIRED)
 find_package(bsoncxx CONFIG REQUIRED)
 find_package(mongocxx CONFIG REQUIRED)
 find_package(cppzmq CONFIG REQUIRED)
+find_package(nlohmann_json CONFIG REQUIRED)
+find_package(jwt-cpp CONFIG REQUIRED)
 
 add_executable(userauth
         main.cpp
@@ -23,9 +25,12 @@ add_executable(userauth
         mongodb/UserAuthRepo/userauthRepo.cpp
         mongodb/connectionlogic/connectionlogic.cpp
         mongodb/mongodbInstance/MongodbInstance.cpp
+        jsonwebtoken/jwtlogic/jwtlogic.cpp
 )
 
 target_link_libraries(userauth PRIVATE Crow::Crow asio::asio)
 target_link_libraries(userauth PRIVATE $<IF:$<TARGET_EXISTS:mongo::bsoncxx_static>,mongo::bsoncxx_static,mongo::bsoncxx_shared>)
 target_link_libraries(userauth PRIVATE $<IF:$<TARGET_EXISTS:mongo::mongocxx_static>,mongo::mongocxx_static,mongo::mongocxx_shared>)
 target_link_libraries(userauth PRIVATE cppzmq cppzmq-static)
+target_link_libraries(userauth PRIVATE nlohmann_json::nlohmann_json)
+target_link_libraries(userauth PRIVATE jwt-cpp::jwt-cpp)

@@ -4,30 +4,8 @@ warning: attempting to set builtin-baseline in vcpkg.json while overriding the d
 the default-registry from vcpkg-configuration.json will be used.
 Detecting compiler hash for triplet x64-windows...
 Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
-The following packages will be built and installed:
-    nlohmann-json:x64-windows@3.11.3#1 -- C:\Users\koath\AppData\Local\vcpkg\registries\git-trees\324d32ddba70bc49650d1a067ddcf3d0bfc6c9b6
-Restored 0 package(s) from C:\Users\koath\AppData\Local\vcpkg\archives in 453 us. Use --debug to see more details.
-Installing 1/1 nlohmann-json:x64-windows@3.11.3#1...
-Building nlohmann-json:x64-windows@3.11.3#1...
-C:\Users\koath\AppData\Local\vcpkg\registries\git-trees\324d32ddba70bc49650d1a067ddcf3d0bfc6c9b6: info: installing overlay port from here
--- Downloading https://github.com/nlohmann/json/archive/v3.11.3.tar.gz -> nlohmann-json-v3.11.3.tar.gz...
--- Extracting source C:/Users/koath/.vcpkg-clion/vcpkg/downloads/nlohmann-json-v3.11.3.tar.gz
--- Using source at C:/Users/koath/.vcpkg-clion/vcpkg/buildtrees/nlohmann-json/src/v3.11.3-434e7fbc3e.clean
--- Found external ninja('1.11.0').
--- Configuring x64-windows
--- Building x64-windows-dbg
--- Building x64-windows-rel
--- Fixing pkgconfig file: C:/Users/koath/.vcpkg-clion/vcpkg/packages/nlohmann-json_x64-windows/share/pkgconfig/nlohmann_json.pc
--- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.2.0-1-any.pkg.tar.zst.
--- Using cached msys2-msys2-runtime-3.5.3-3-x86_64.pkg.tar.zst.
--- Using msys root at C:/Users/koath/.vcpkg-clion/vcpkg/downloads/tools/msys2/1e74ca60daa10104
--- Fixing pkgconfig file: C:/Users/koath/.vcpkg-clion/vcpkg/packages/nlohmann-json_x64-windows/debug/share/pkgconfig/nlohmann_json.pc
--- Installing: C:/Users/koath/.vcpkg-clion/vcpkg/packages/nlohmann-json_x64-windows/share/nlohmann-json/copyright
--- Performing post-build validation
-Stored binaries in 1 destinations in 721 ms.
-Elapsed time to handle nlohmann-json:x64-windows: 17 s
-nlohmann-json:x64-windows package ABI: 48f019a03a84939ee4c2f0c52745a52dafffd3df16eb96300e6496dcf4ff6ee4
-Total install time: 17 s
+All requested packages are currently installed.
+Total install time: 1.2 us
 asio provides CMake targets:
 
   # this is heuristically generated, and may not be correct
@@ -51,6 +29,12 @@ crow provides CMake targets:
   find_package(Crow CONFIG REQUIRED)
   target_link_libraries(main PRIVATE Crow::Crow asio::asio)
 
+jwt-cpp provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(jwt-cpp CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE jwt-cpp::jwt-cpp)
+
 mongo-cxx-driver provides CMake targets:
 
     find_package(bsoncxx CONFIG REQUIRED)
@@ -73,6 +57,6 @@ For more information, see the docs here:
     https://json.nlohmann.me/api/macros/json_use_implicit_conversions/
 
 -- Running vcpkg install - done
--- Configuring done (34.5s)
+-- Configuring done (2.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug

@@ -2,6 +2,8 @@
 // Created by koath on 11/7/2024.
 //
 
+// TODO: Refactor JSON parsing using PICOJSON
+
 #include "UserAuth.h"
 
 #include <utility>

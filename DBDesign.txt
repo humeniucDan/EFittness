@@ -8,6 +8,7 @@ DB Design:
 		- lastName: string
 		- isTrainer: bool
 		- joined: date
+
 		- weightHistory: arr({weigthAt: date, dateAt: date})
 		- height (debatable if it should be an array or a single value): arr(int)
 		- bmi : float

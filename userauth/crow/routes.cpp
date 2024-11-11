@@ -5,6 +5,7 @@
 #include "routes.h"
 #include "../login/login.h"
 #include "../mongodb/UserAuthRepo/userauthRepo.h"
+#include "../jsonwebtoken/jwtlogic/jwtlogic.h
 
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
     CROW_ROUTE(app, "/").methods("GET"_method)
@@ -27,13 +28,14 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 //                    }
 //                }
 
-                return crow::response(200, "token");
+                return crow::response(200, ge);
             });
 
     CROW_ROUTE(app, "/signup").methods("POST"_method)
             ([](const crow::request& req){
                 try {
-                    UserAuth curUser = getUserAuthByEmail("ana@mail.com");
+                    std::cout << req.body << std::endl;
+                    UserAuth curUser = getUserAuthByEmail(req.body);
                     std::cout <<
                         curUser.getId() << " " <<
                         curUser.getEmail() << " " <<

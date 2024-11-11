@@ -64,7 +64,7 @@ Depends: vcpkg-cmake
 Architecture: x64-windows
 Multi-Arch: same
 Abi: 5ca5afcc37e6561c9c7bf5199ca77478d5384df93e6b6f194c3c4553a56777e3
-Status: purge ok not-installed
+Status: install ok installed
 
 Package: openssl
 Version: 3.3.2
@@ -74,7 +74,7 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: 42967b501d741c081c9ef5a52d66d75929e85c9d9fc6a4490187af0171379345
 Description: OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
-Status: purge ok not-installed
+Status: install ok installed
 
 Package: lz4
 Version: 1.10.0
@@ -188,5 +188,34 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: 7c28235b06dd2f70158c0547f9082a3cc76206ef87ba5e95b928769bad1d808a
 Description: MongoDB C++ Driver.
+Status: install ok installed
+
+Package: nlohmann-json
+Version: 3.11.3
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 48f019a03a84939ee4c2f0c52745a52dafffd3df16eb96300e6496dcf4ff6ee4
+Description: JSON for Modern C++
+Status: install ok installed
+
+Package: picojson
+Version: 1.3.0
+Port-Version: 3
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f10049a35abc136f34acaf65cf5e8ddc5383e9c1980eef7c4b4d0fbaf9b6f5e2
+Description: A header-file-only, JSON parser serializer in C++.
+Status: install ok installed
+
+Package: jwt-cpp
+Version: 0.7.0
+Port-Version: 1
+Depends: openssl, picojson, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 04a09475e4254739481db8b4af4b29fc93de9a13acecec26bcae741cf84a4fe5
+Description: A header only library for creating and validating json web tokens in c++
 Status: install ok installed
 
