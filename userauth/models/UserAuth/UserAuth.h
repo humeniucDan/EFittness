@@ -17,10 +17,12 @@ private:
 public:
     explicit UserAuth(const std::string& json);
     UserAuth(int id, std::string email, std::string password);
+    UserAuth(std::string email, std::string password);
 
     int getId() const;
-    std::string getEmail();
-    std::string getPassword();
+    std::string getEmail() const;
+    std::string getPassword() const;
+    void setPassword(std::string newPassword);
 
     std::string toJson();
 };

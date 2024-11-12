@@ -5,30 +5,43 @@
 #include "routes.h"
 #include "../login/login.h"
 #include "../mongodb/UserAuthRepo/userauthRepo.h"
-#include "../jsonwebtoken/jwtlogic/jwtlogic.h"
+#include "../jsonwebtoken/jwtgeneration/jwtgeneration.h"
+#include "../jsonwebtoken/jwtvalidation/jwtvalidation.h"
 
+//using Session = crow::SessionMiddleware<crow::FileStore>;
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
     CROW_ROUTE(app, "/").methods("GET"_method)
-            ([](const crow::request& req){
+            ([&app](const crow::request& req){
+                auto& ctx = app.get_context<crow::CookieParser>(req);
+                std::string jwToken = ctx.get_cookie("jwToken");
+
+                std::string retStr = validateJwToken(jwToken) ? "Valid" : "Invalid";
+
                 produce();
-                return crow::response(200, "Hello!");
+                return crow::response(200, retStr);
+            });
+
+    CROW_ROUTE(app, "/logout").methods("GET"_method)
+            ([](const crow::request& req){
+                crow::response rsp(200, "Logged out!");
+                rsp.add_header("Set-Cookie", "jwToken=");
+
+                return rsp;
             });
 
     CROW_ROUTE(app, "/login").methods("GET"_method)
             ([](const crow::request& req){
-//                std::string token;
-//                try {
-//                    token = login();
-//                } catch (int e) {
-//                    switch (e) {
-//                        case 1:
-//                            return crow::response(400, "Email not found");
-//                        case 2:
-//                            return crow::response(400, "Password incorect");
-//                    }
-//                }
-                crow::response rsp(200, "jwtToken");
-                rsp.add_header("Set-Cookie", "generatedToken="+genToken(req.body));
+                std::string token;
+                try {
+                    token = login(req.body);
+                } catch (int e) {
+                    switch (e) {
+                        // TODO: handle exceptions
+                    }
+                }
+
+                crow::response rsp(200, token);
+                rsp.add_header("Set-Cookie", "jwToken="+token);
 
                 return rsp;
             });

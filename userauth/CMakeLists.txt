@@ -25,7 +25,14 @@ add_executable(userauth
         mongodb/UserAuthRepo/userauthRepo.cpp
         mongodb/connectionlogic/connectionlogic.cpp
         mongodb/mongodbInstance/MongodbInstance.cpp
-        jsonwebtoken/jwtlogic/jwtlogic.cpp
+        jsonwebtoken/jwtgeneration/jwtgeneration.cpp
+        login/login.cpp
+        login/login.cpp
+        signup/signup.cpp
+        signup/signup.h
+        jsonwebtoken/jwtvalidation/jwtvalidation.cpp
+        jsonwebtoken/jwtvalidation/jwtvalidation.h
+        jsonwebtoken/jwtvalidation/jwtvalidation.cpp
 )
 
 target_link_libraries(userauth PRIVATE Crow::Crow asio::asio)

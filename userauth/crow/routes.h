@@ -12,7 +12,6 @@
 #include "../zeromq/zeromq.h"
 
 //using Session = crow::SessionMiddleware<crow::FileStore>;
-
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app);
 
 #endif //USERAUTH_ROUTES_H

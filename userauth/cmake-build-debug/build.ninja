@@ -112,12 +112,39 @@ build CMakeFiles\userauth.dir\mongodb\mongodbInstance\MongodbInstance.cpp.obj: C
   TARGET_COMPILE_PDB = CMakeFiles\userauth.dir\
   TARGET_PDB = userauth.pdb
 
-build CMakeFiles\userauth.dir\jsonwebtoken\jwtlogic\jwtlogic.cpp.obj: CXX_COMPILER__userauth_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\userauth\jsonwebtoken\jwtlogic\jwtlogic.cpp || cmake_object_order_depends_target_userauth
+build CMakeFiles\userauth.dir\jsonwebtoken\jwtgeneration\jwtgeneration.cpp.obj: CXX_COMPILER__userauth_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\userauth\jsonwebtoken\jwtgeneration\jwtgeneration.cpp || cmake_object_order_depends_target_userauth
   DEFINES = -DASIO_STANDALONE
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
   INCLUDES = -IC:\UTCN\an3\sem1\is\proj\userauth\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\userauth\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include\bsoncxx\v_noabi -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include\mongocxx\v_noabi -external:W0
   OBJECT_DIR = CMakeFiles\userauth.dir
-  OBJECT_FILE_DIR = CMakeFiles\userauth.dir\jsonwebtoken\jwtlogic
+  OBJECT_FILE_DIR = CMakeFiles\userauth.dir\jsonwebtoken\jwtgeneration
+  TARGET_COMPILE_PDB = CMakeFiles\userauth.dir\
+  TARGET_PDB = userauth.pdb
+
+build CMakeFiles\userauth.dir\login\login.cpp.obj: CXX_COMPILER__userauth_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\userauth\login\login.cpp || cmake_object_order_depends_target_userauth
+  DEFINES = -DASIO_STANDALONE
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\userauth\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\userauth\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include\bsoncxx\v_noabi -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include\mongocxx\v_noabi -external:W0
+  OBJECT_DIR = CMakeFiles\userauth.dir
+  OBJECT_FILE_DIR = CMakeFiles\userauth.dir\login
+  TARGET_COMPILE_PDB = CMakeFiles\userauth.dir\
+  TARGET_PDB = userauth.pdb
+
+build CMakeFiles\userauth.dir\signup\signup.cpp.obj: CXX_COMPILER__userauth_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\userauth\signup\signup.cpp || cmake_object_order_depends_target_userauth
+  DEFINES = -DASIO_STANDALONE
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\userauth\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\userauth\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include\bsoncxx\v_noabi -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include\mongocxx\v_noabi -external:W0
+  OBJECT_DIR = CMakeFiles\userauth.dir
+  OBJECT_FILE_DIR = CMakeFiles\userauth.dir\signup
+  TARGET_COMPILE_PDB = CMakeFiles\userauth.dir\
+  TARGET_PDB = userauth.pdb
+
+build CMakeFiles\userauth.dir\jsonwebtoken\jwtvalidation\jwtvalidation.cpp.obj: CXX_COMPILER__userauth_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\userauth\jsonwebtoken\jwtvalidation\jwtvalidation.cpp || cmake_object_order_depends_target_userauth
+  DEFINES = -DASIO_STANDALONE
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\userauth\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\userauth\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include\bsoncxx\v_noabi -external:IC:\UTCN\an3\sem1\is\proj\userauth\cmake-build-debug\vcpkg_installed\x64-windows\include\mongocxx\v_noabi -external:W0
+  OBJECT_DIR = CMakeFiles\userauth.dir
+  OBJECT_FILE_DIR = CMakeFiles\userauth.dir\jsonwebtoken\jwtvalidation
   TARGET_COMPILE_PDB = CMakeFiles\userauth.dir\
   TARGET_PDB = userauth.pdb
 
@@ -129,7 +156,7 @@ build CMakeFiles\userauth.dir\jsonwebtoken\jwtlogic\jwtlogic.cpp.obj: CXX_COMPIL
 #############################################
 # Link the executable userauth.exe
 
-build userauth.exe: CXX_EXECUTABLE_LINKER__userauth_Debug CMakeFiles\userauth.dir\main.cpp.obj CMakeFiles\userauth.dir\zeromq\zeromq.cpp.obj CMakeFiles\userauth.dir\crow\routes.cpp.obj CMakeFiles\userauth.dir\models\UserAuth\UserAuth.cpp.obj CMakeFiles\userauth.dir\mongodb\UserAuthRepo\userauthRepo.cpp.obj CMakeFiles\userauth.dir\mongodb\connectionlogic\connectionlogic.cpp.obj CMakeFiles\userauth.dir\mongodb\mongodbInstance\MongodbInstance.cpp.obj CMakeFiles\userauth.dir\jsonwebtoken\jwtlogic\jwtlogic.cpp.obj | vcpkg_installed\x64-windows\debug\lib\mongocxx-v_noabi-dhs-mdd.lib vcpkg_installed\x64-windows\debug\lib\bsoncxx-v_noabi-dhs-mdd.lib vcpkg_installed\x64-windows\debug\lib\libzmq-mt-gd-4_3_5.lib vcpkg_installed\x64-windows\debug\lib\libssl.lib vcpkg_installed\x64-windows\debug\lib\libcrypto.lib
+build userauth.exe: CXX_EXECUTABLE_LINKER__userauth_Debug CMakeFiles\userauth.dir\main.cpp.obj CMakeFiles\userauth.dir\zeromq\zeromq.cpp.obj CMakeFiles\userauth.dir\crow\routes.cpp.obj CMakeFiles\userauth.dir\models\UserAuth\UserAuth.cpp.obj CMakeFiles\userauth.dir\mongodb\UserAuthRepo\userauthRepo.cpp.obj CMakeFiles\userauth.dir\mongodb\connectionlogic\connectionlogic.cpp.obj CMakeFiles\userauth.dir\mongodb\mongodbInstance\MongodbInstance.cpp.obj CMakeFiles\userauth.dir\jsonwebtoken\jwtgeneration\jwtgeneration.cpp.obj CMakeFiles\userauth.dir\login\login.cpp.obj CMakeFiles\userauth.dir\signup\signup.cpp.obj CMakeFiles\userauth.dir\jsonwebtoken\jwtvalidation\jwtvalidation.cpp.obj | vcpkg_installed\x64-windows\debug\lib\mongocxx-v_noabi-dhs-mdd.lib vcpkg_installed\x64-windows\debug\lib\bsoncxx-v_noabi-dhs-mdd.lib vcpkg_installed\x64-windows\debug\lib\libzmq-mt-gd-4_3_5.lib vcpkg_installed\x64-windows\debug\lib\libssl.lib vcpkg_installed\x64-windows\debug\lib\libcrypto.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = vcpkg_installed\x64-windows\debug\lib\mongocxx-v_noabi-dhs-mdd.lib  vcpkg_installed\x64-windows\debug\lib\bsoncxx-v_noabi-dhs-mdd.lib  vcpkg_installed\x64-windows\debug\lib\libzmq-mt-gd-4_3_5.lib  ws2_32.lib  advapi32.lib  rpcrt4.lib  iphlpapi.lib  vcpkg_installed\x64-windows\debug\lib\libssl.lib  vcpkg_installed\x64-windows\debug\lib\libcrypto.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
