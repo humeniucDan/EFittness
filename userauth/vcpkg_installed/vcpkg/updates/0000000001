@@ -1,8 +1,9 @@
-Package: picojson
-Version: 1.3.0
-Port-Version: 3
+Package: argon2
+Version: 20190702
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 3fd81f9f949ffc992c8d5e14deb8047dfd65eb45cc488e440243112e537a98a0
-Description: A header-file-only, JSON parser serializer in C++.
+Abi: e7ffd3c9e7a85a7460bfcfdef2bba12ae954d8e36ddf9cacd7412a863d8495d8
+Description: Password-hashing library.
 Status: install ok installed

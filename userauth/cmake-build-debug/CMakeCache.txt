@@ -341,6 +341,9 @@ mongocxx_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_inst
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/nlohmann_json
 
+//The directory containing a CMake configuration file for unofficial-argon2.
+unofficial-argon2_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/unofficial-argon2
+
 //The directory containing a CMake configuration file for unofficial-utf8proc.
 unofficial-utf8proc_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/unofficial-utf8proc
 

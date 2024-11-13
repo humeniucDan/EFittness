@@ -4,7 +4,7 @@
 
 #include "zeromq.h"
 
-// TODO: add variables for:
+// TODO: add a constants file for:
 //      -protocol
 //      -host
 //      -port
@@ -33,6 +33,8 @@ int consume(){
 
     return 0;
 }
+
+//TODO: debug or deprecate
 void startConsuming(){
     std::thread consumer{consume};
 }

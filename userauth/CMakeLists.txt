@@ -15,6 +15,7 @@ find_package(mongocxx CONFIG REQUIRED)
 find_package(cppzmq CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 find_package(jwt-cpp CONFIG REQUIRED)
+find_package(unofficial-argon2 CONFIG REQUIRED)
 
 add_executable(userauth
         main.cpp
@@ -29,9 +30,7 @@ add_executable(userauth
         login/login.cpp
         login/login.cpp
         signup/signup.cpp
-        signup/signup.h
         jsonwebtoken/jwtvalidation/jwtvalidation.cpp
-        jsonwebtoken/jwtvalidation/jwtvalidation.h
         jsonwebtoken/jwtvalidation/jwtvalidation.cpp
 )
 
@@ -41,3 +40,5 @@ target_link_libraries(userauth PRIVATE $<IF:$<TARGET_EXISTS:mongo::mongocxx_stat
 target_link_libraries(userauth PRIVATE cppzmq cppzmq-static)
 target_link_libraries(userauth PRIVATE nlohmann_json::nlohmann_json)
 target_link_libraries(userauth PRIVATE jwt-cpp::jwt-cpp)
+target_link_libraries(userauth PRIVATE unofficial::argon2::libargon2)
+

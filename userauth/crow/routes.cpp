@@ -25,7 +25,6 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
             ([](const crow::request& req){
                 crow::response rsp(200, "Logged out!");
                 rsp.add_header("Set-Cookie", "jwToken=");
-
                 return rsp;
             });
 
@@ -49,6 +48,10 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
     CROW_ROUTE(app, "/signup").methods("POST"_method)
             ([](const crow::request& req){
                 try {
+                    //  TODO: fix issues :
+                    //  - mongodb should be an auto incrementing int without collisions
+                    //  - remove password from object before sending through queue
+
                     std::cout << req.body << std::endl;
                     UserAuth curUser = getUserAuthByEmail(req.body);
                     std::cout <<
@@ -59,6 +62,12 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                 } catch (nlohmann::json::parse_error &e) {
                     std::cout << "JSON parsing error: " << e.what() << std::endl;
                 }
+                return crow::response(200, "Hello!");
+            });
+    CROW_ROUTE(app, "/checkHighestId").methods("GET"_method)
+            ([](const crow::request& req){
+                  getNextUserAuthId();
+
                 return crow::response(200, "Hello!");
             });
 }

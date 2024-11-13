@@ -1746,6 +1746,18 @@
 			"value" : "C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/nlohmann_json"
 		},
 		{
+			"name" : "unofficial-argon2_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for unofficial-argon2."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/unofficial-argon2"
+		},
+		{
 			"name" : "unofficial-utf8proc_DIR",
 			"properties" : 
 			[

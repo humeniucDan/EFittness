@@ -11,6 +11,7 @@
 #include <bsoncxx/builder/stream/document.hpp>
 #include "../../models/UserAuth/UserAuth.h"
 
+int getNextUserAuthId();
 UserAuth getUserAuthByEmail(const std::string& email);
 
 #endif //USERAUTH_USERAUTHREPO_H

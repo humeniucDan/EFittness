@@ -1,0 +1,13 @@
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "gender": "M",
+    "birthday": "1990-01-01",
+    "profilePicture": "https://scontent-otp1-1.xx.fbcdn.net/v/t39.30808-6/295968933_1734299630283126_8680130822216986241_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=FcVaO4lawbAQ7kNvgH__Hwn&_nc_zt=23&_nc_ht=scontent-otp1-1.xx&_nc_gid=Ab83jqhgaKCNuH6-HBwxRW_&oh=00_AYBJ8mpjkffj7vRKd-acBSYF4_UEp8UFtwO6ASEXUELaeQ&oe=6729C885",
+    "address": {
+        "lat": 40.7128,
+        "lng": 74.0060
+    },
+    "phone": "0740123456"
+}

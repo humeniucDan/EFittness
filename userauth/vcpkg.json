@@ -29,6 +29,10 @@
     {
       "name" : "jwt-cpp",
       "version>=": "0.7.0#1"
+    },
+    {
+      "name" : "argon2",
+      "version>=": "20190702#1"
     }
   ]
 }

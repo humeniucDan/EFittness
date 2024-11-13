@@ -22,6 +22,8 @@ mongocxx::client getMongodbConnection(const std::string& dbUrl){
 //         TODO: Handle errors
         std::cout << e.what() << "\n";
     }
+
+//    return conn
 }
 
 const MongodbComponents* getMongodbComponents(){

@@ -3,6 +3,7 @@
 //
 
 // TODO: Refactor JSON parsing using PICOJSON
+// TODO: Use argon2 for password hashing: https://vcpkg.io/en/package/argon2
 
 #include "UserAuth.h"
 
@@ -14,16 +15,21 @@ UserAuth::UserAuth(int id, std::string email, std::string password)
     email(std::move(email)),
     password(std::move(password)) {}
 UserAuth::UserAuth(std::string email, std::string password)
-        : id(0),
+        : id(-1),
           email(std::move(email)),
           password(std::move(password)) {}
 
 UserAuth::UserAuth(const std::string& json) {
     try {
         nlohmann::json jsonData = nlohmann::json::parse(json);
-        this->id = jsonData["_id"];
-        this->email = jsonData["email"];
-        this->password = jsonData["password"];
+
+        if(jsonData.contains("_id"))
+            this->id = jsonData["_id"];
+
+        if(jsonData.contains("email") && jsonData.contains("password")) {
+            this->email = jsonData["email"];
+            this->password = jsonData["password"];
+        }
     } catch (nlohmann::json::type_error &e) {
         std::cout << "JSON parsing error: " << e.what() << std::endl;
     }
