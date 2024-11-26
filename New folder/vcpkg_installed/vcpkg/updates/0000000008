@@ -1,0 +1,8 @@
+Package: cppzmq
+Version: 4.10.0
+Depends: vcpkg-cmake, vcpkg-cmake-config, zeromq
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f0e03ca82414782a13766e1e4092c9abb2e8f7c5ec7f0e86fad5156bc7bde5a4
+Description: Header-only C++ binding for ZeroMQ
+Status: install ok half-installed

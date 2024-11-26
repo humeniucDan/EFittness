@@ -13,5 +13,6 @@
 
 int getNextUserAuthId();
 UserAuth getUserAuthByEmail(const std::string& email);
+bool insertUserAuthIntoDB(const UserAuth&);
 
 #endif //USERAUTH_USERAUTHREPO_H

@@ -7,6 +7,7 @@
 #include "../mongodb/UserAuthRepo/userauthRepo.h"
 #include "../jsonwebtoken/jwtgeneration/jwtgeneration.h"
 #include "../jsonwebtoken/jwtvalidation/jwtvalidation.h"
+#include "../signup/signup.h"
 
 //using Session = crow::SessionMiddleware<crow::FileStore>;
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
@@ -17,7 +18,7 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 
                 std::string retStr = validateJwToken(jwToken) ? "Valid" : "Invalid";
 
-                produce();
+                produce(std::string());
                 return crow::response(200, retStr);
             });
 
@@ -52,22 +53,19 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                     //  - mongodb should be an auto incrementing int without collisions
                     //  - remove password from object before sending through queue
 
-                    std::cout << req.body << std::endl;
-                    UserAuth curUser = getUserAuthByEmail(req.body);
-                    std::cout <<
-                        curUser.getId() << " " <<
-                        curUser.getEmail() << " " <<
-                        curUser.getPassword() <<
-                        "\n";
+//                    int tmp = getNextUserAuthId();
+                    auto rsp = crow::response(200, signup(req.body));
+
+                    return rsp;
+
                 } catch (nlohmann::json::parse_error &e) {
-                    std::cout << "JSON parsing error: " << e.what() << std::endl;
+//                    std::cout << "JSON parsing error: " << e.what() << std::endl;
                 }
                 return crow::response(200, "Hello!");
             });
     CROW_ROUTE(app, "/checkHighestId").methods("GET"_method)
             ([](const crow::request& req){
-                  getNextUserAuthId();
-
-                return crow::response(200, "Hello!");
+                int nextid = getNextUserAuthId();
+                return crow::response(200, std::to_string(nextid));
             });
 }

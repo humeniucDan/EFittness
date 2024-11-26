@@ -1,0 +1,52 @@
+"C:\cLion\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/cLion/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe" -DCMAKE_TOOLCHAIN_FILE=C:\Users\koath\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake -G Ninja -S "C:\UTCN\an3\sem1\is\proj\New folder" -B "C:\UTCN\an3\sem1\is\proj\New folder\cmake-build-debug"
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
+All requested packages are currently installed.
+Total install time: 1.2 us
+asio provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(asio CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE asio::asio)
+
+cppzmq provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(cppzmq CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE cppzmq cppzmq-static)
+
+cppzmq provides pkg-config modules:
+
+  # C++ binding for libzmq
+  cppzmq
+
+crow provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(Crow CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE Crow::Crow asio::asio)
+
+picojson is header-only and can be used from CMake via:
+
+  find_path(PICOJSON_INCLUDE_DIRS "picojson/picojson.h")
+  target_include_directories(main PRIVATE ${PICOJSON_INCLUDE_DIRS})
+
+jwt-cpp provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(jwt-cpp CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE jwt-cpp::jwt-cpp)
+
+mongo-cxx-driver provides CMake targets:
+
+    find_package(bsoncxx CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:mongo::bsoncxx_static>,mongo::bsoncxx_static,mongo::bsoncxx_shared>)
+
+    find_package(mongocxx CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:mongo::mongocxx_static>,mongo::mongocxx_static,mongo::mongocxx_shared>)
+
+-- Running vcpkg install - done
+-- Configuring done (2.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/UTCN/an3/sem1/is/proj/New folder/cmake-build-debug

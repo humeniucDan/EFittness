@@ -14,6 +14,6 @@
 
 //void startConsuming();
 int consume();
-int produce();
+int produce(std::string string);
 
 #endif //USERAUTH_ZEROMQ_H

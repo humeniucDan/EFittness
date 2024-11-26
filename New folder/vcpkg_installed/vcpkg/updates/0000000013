@@ -1,0 +1,8 @@
+Package: picojson
+Version: 1.3.0
+Port-Version: 3
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3fd81f9f949ffc992c8d5e14deb8047dfd65eb45cc488e440243112e537a98a0
+Description: A header-file-only, JSON parser serializer in C++.
+Status: install ok installed

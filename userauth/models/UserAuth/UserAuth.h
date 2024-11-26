@@ -23,6 +23,7 @@ public:
     std::string getEmail() const;
     std::string getPassword() const;
     void setPassword(std::string newPassword);
+    void setId(const int& id);
 
     std::string toJson();
 };

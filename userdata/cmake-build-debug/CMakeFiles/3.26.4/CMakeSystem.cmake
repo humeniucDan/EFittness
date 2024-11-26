@@ -1,15 +1,26 @@
-set(CMAKE_HOST_SYSTEM "Windows-10.0.22631")
-set(CMAKE_HOST_SYSTEM_NAME "Windows")
-set(CMAKE_HOST_SYSTEM_VERSION "10.0.22631")
-set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
+cmake_minimum_required(VERSION 3.26)
+project(userdata)
 
-include("C:/Users/koath/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_CXX_STANDARD 20)
 
-set(CMAKE_SYSTEM "Windows-10.0.22631")
-set(CMAKE_SYSTEM_NAME "Windows")
-set(CMAKE_SYSTEM_VERSION "10.0.22631")
-set(CMAKE_SYSTEM_PROCESSOR "AMD64")
+include_directories("${CMAKE_SOURCE_DIR}/vcpkg_installed/x64-windows/include")
+include_directories("${CMAKE_SOURCE_DIR}/vcpkg_installed/x64-linux/include")
 
-set(CMAKE_CROSSCOMPILING "FALSE")
+link_directories("${CMAKE_SOURCE_DIR}/vcpkg_installed/x64-windows")
+link_directories("${CMAKE_SOURCE_DIR}/vcpkg_installed/x64-linux")
 
-set(CMAKE_SYSTEM_LOADED 1)
+find_package(Crow CONFIG REQUIRED)
+find_package(bsoncxx CONFIG REQUIRED)
+find_package(mongocxx CONFIG REQUIRED)
+find_package(cppzmq CONFIG REQUIRED)
+find_package(jwt-cpp CONFIG REQUIRED)
+
+add_executable(userdata
+        main.cpp
+)
+
+target_link_libraries(userdata PRIVATE Crow::Crow asio::asio)
+target_link_libraries(userdata PRIVATE $<IF:$<TARGET_EXISTS:mongo::bsoncxx_static>,mongo::bsoncxx_static,mongo::bsoncxx_shared>)
+target_link_libraries(userdata PRIVATE $<IF:$<TARGET_EXISTS:mongo::mongocxx_static>,mongo::mongocxx_static,mongo::mongocxx_shared>)
+target_link_libraries(userdata PRIVATE cppzmq cppzmq-static)
+target_link_libraries(userdata PRIVATE jwt-cpp::jwt-cpp)

@@ -1,35 +1,41 @@
-Detecting compiler hash for triplet x64-windows...
-Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
-All requested packages are currently installed.
-Total install time: 1.1 us
-asio provides CMake targets:
-
-  # this is heuristically generated, and may not be correct
-  find_package(asio CONFIG REQUIRED)
-  target_link_libraries(main PRIVATE asio::asio)
-
-cppzmq provides CMake targets:
-
-  # this is heuristically generated, and may not be correct
-  find_package(cppzmq CONFIG REQUIRED)
-  target_link_libraries(main PRIVATE cppzmq cppzmq-static)
-
-cppzmq provides pkg-config modules:
-
-  # C++ binding for libzmq
-  cppzmq
-
-crow provides CMake targets:
-
-  # this is heuristically generated, and may not be correct
-  find_package(Crow CONFIG REQUIRED)
-  target_link_libraries(main PRIVATE Crow::Crow asio::asio)
-
-mongo-cxx-driver provides CMake targets:
-
-    find_package(bsoncxx CONFIG REQUIRED)
-    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:mongo::bsoncxx_static>,mongo::bsoncxx_static,mongo::bsoncxx_shared>)
-
-    find_package(mongocxx CONFIG REQUIRED)
-    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:mongo::mongocxx_static>,mongo::mongocxx_static,mongo::mongocxx_shared>)
+error: no version database entry for vcpkg-cmake at 2024-04 -23.
+Available versions:
+  2024-04-23
+  2024-04-18
+  2023-05-04
+  2022-12-22
+  2022-11-13
+  2022-10-30
+  2022-09-26
+  2022-09-13
+  2022-08-18
+  2022-07-18
+  2022-07-02
+  2022-06-07
+  2022-05-10#1
+  2022-05-10
+  2022-05-06
+  2022-05-05
+  2022-04-21
+  2022-04-12
+  2022-04-07
+  2022-04-05
+  2022-02-14
+  2022-01-19
+  2021-12-20
+  2021-12-05
+  2021-09-13
+  2021-07-30
+  2021-07-26
+  2021-06-25#5
+  2021-06-25#4
+  2021-02-28#3
+  2021-02-28#2
+  2021-02-28#1
+  2021-02-28
+  2021-02-26
+See `vcpkg help versioning` or https://learn.microsoft.com/vcpkg/users/versioning?WT.mc_id=vcpkg_inproduct_cli for more information.
+See https://learn.microsoft.com/vcpkg/users/versioning-troubleshooting?WT.mc_id=vcpkg_inproduct_cli for more information.
+note: updating vcpkg by rerunning bootstrap-vcpkg may resolve this failure.
+note: while loading vcpkg-cmake@2024-04 -23
 

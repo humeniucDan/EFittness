@@ -5,9 +5,7 @@
 #include "../../models/UserAuth/UserAuth.h"
 #include "../connectionlogic/connectionlogic.h"
 
-int getNextUserAuthId(){
-    auto* comps = const_cast<MongodbComponents *>(getMongodbComponents());
-
+int getNextUserAuthId(MongodbComponents *comps){
     // Build the sort document to sort by `_id` in descending order.
     auto sort_order = static_cast<bsoncxx::view_or_value<bsoncxx::document::view, bsoncxx::document::value>>(
             bsoncxx::builder::stream::document{} << "_id" << -1 << bsoncxx::builder::stream::finalize
@@ -23,7 +21,16 @@ int getNextUserAuthId(){
         std::cout << "No documents found in the collection." << std::endl;
     }
 
-    return 1;
+    return UserAuth(bsoncxx::to_json(result->view())).getId();
+}
+
+int getNextUserAuthId(){
+    auto* comps = const_cast<MongodbComponents *>(getMongodbComponents());
+    int curId =  getNextUserAuthId(comps);
+    delete comps;
+
+    // Build the sort document to sort by `_id` in descending order.
+    return curId + 1;
 }
 
 UserAuth getUserAuthByEmail(const std::string& email){
@@ -49,4 +56,22 @@ UserAuth getUserAuthByEmail(const std::string& email){
     UserAuth usr(json);
 
     return usr;
+}
+
+///TODO: bool or string ???
+bool insertUserAuthIntoDB(const UserAuth& userAuth){
+    auto* comps = const_cast<MongodbComponents *>(getMongodbComponents());
+
+    bsoncxx::builder::stream::document document_builder;
+    document_builder << "_id" << userAuth.getId()
+                     << "email" << userAuth.getEmail()
+                     << "password" << userAuth.getPassword();
+
+    // Finalize the document
+    bsoncxx::document::value document = document_builder << bsoncxx::builder::stream::finalize;
+
+    // Insert the document into the collection
+    auto result = comps->col.insert_one(document.view());
+
+    return true;
 }

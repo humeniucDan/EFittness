@@ -7,8 +7,11 @@
 
 #include <string>
 #include "../models/UserAuth/UserAuth.h"
+#include "../models/UserData/UserData.h"
+#include "../mongodb/UserAuthRepo/userauthRepo.h"
+#include "../zeromq/zeromq.h"
 
-std::string signup(std::string);
+std::string signup(const std::string&);
 std::string signup(UserAuth);
 
 #endif //USERAUTH_SIGNUP_H

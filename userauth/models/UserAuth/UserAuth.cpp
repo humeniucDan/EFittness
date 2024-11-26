@@ -15,9 +15,9 @@ UserAuth::UserAuth(int id, std::string email, std::string password)
     email(std::move(email)),
     password(std::move(password)) {}
 UserAuth::UserAuth(std::string email, std::string password)
-        : id(-1),
-          email(std::move(email)),
-          password(std::move(password)) {}
+    : id(-1),
+    email(std::move(email)),
+    password(std::move(password)) {}
 
 UserAuth::UserAuth(const std::string& json) {
     try {
@@ -43,6 +43,10 @@ std::string UserAuth::getEmail() const{
 }
 std::string UserAuth::getPassword() const{
     return this->password;
+}
+
+void UserAuth::setId(const int &id) {
+    this->id = id;
 }
 
 void UserAuth::setPassword(std::string newPassword){

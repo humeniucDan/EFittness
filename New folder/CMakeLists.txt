@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
-#project(userdata)
+project(userdata)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -25,7 +25,6 @@ target_link_libraries(userdata PRIVATE Crow::Crow asio::asio)
 target_link_libraries(userdata PRIVATE $<IF:$<TARGET_EXISTS:mongo::bsoncxx_static>,mongo::bsoncxx_static,mongo::bsoncxx_shared>)
 target_link_libraries(userdata PRIVATE $<IF:$<TARGET_EXISTS:mongo::mongocxx_static>,mongo::mongocxx_static,mongo::mongocxx_shared>)
 target_link_libraries(userdata PRIVATE cppzmq cppzmq-static)
-target_link_libraries(userdata PRIVATE nlohmann_json::nlohmann_json)
 target_link_libraries(userdata PRIVATE jwt-cpp::jwt-cpp)
 
 #target_include_directories(main PRIVATE ${PICOJSON_INCLUDE_DIRS})

@@ -39,17 +39,17 @@ void startConsuming(){
     std::thread consumer{consume};
 }
 
-int produce()
+int produce(std::string packet)
 {
     zmq::context_t context{1};
 
     zmq::socket_t socket{context, zmq::socket_type::push};
     socket.connect("tcp://localhost:5555");
 
-    const std::string data{"Hello"};
+//    const std::string data{packet};
 
-    socket.send(zmq::buffer(data), zmq::send_flags::none);
-    std::cout << "Producer sent: " << data << "\n";
+    socket.send(zmq::buffer(packet), zmq::send_flags::none);
+    std::cout << "Producer sent: " << packet << "\n";
 
     return 0;
 }
