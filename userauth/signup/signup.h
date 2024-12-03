@@ -12,6 +12,7 @@
 #include "../zeromq/zeromq.h"
 
 std::string signup(const std::string&);
+void setCurrentHighestId();
 std::string signup(UserAuth);
 
 #endif //USERAUTH_SIGNUP_H

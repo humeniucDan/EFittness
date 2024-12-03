@@ -25,10 +25,12 @@
 
 #include "mongocxx/instance.hpp"
 
+#include "signup/signup.h"
+
 int main() {
 //    startConsuming();
 
-    // TODO: REFACTOR IN A SINGLETON PATTERN
+    // TODO: REFACTOR IN A SINGLETON PATTERN maybe
     mongocxx::instance inst{};
 
 //    using Session = crow::SessionMiddleware<crow::FileStore>;
@@ -36,7 +38,7 @@ int main() {
             crow::FileStore{"/tmp/sessiondata"}
     }};
 
-    std::thread t{consume};
+    setCurrentHighestId();
 
     startRoutes(app);
 

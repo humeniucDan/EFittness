@@ -31,11 +31,10 @@ add_executable(userauth
         login/login.cpp
         signup/signup.cpp
         jsonwebtoken/jwtvalidation/jwtvalidation.cpp
-        jsonwebtoken/jwtvalidation/jwtvalidation.cpp
-        models/UserData/UserData.cpp
         models/UserData/UserData.cpp
         models/Location/Location.cpp
         mongodb/userdataRepo/userdataRepo.cpp
+        argon2/argonhelper.cpp
 )
 
 target_link_libraries(userauth PRIVATE Crow::Crow asio::asio)

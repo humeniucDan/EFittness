@@ -19,6 +19,7 @@ find_package(jwt-cpp CONFIG REQUIRED)
 
 add_executable(userdata
         main.cpp
+        zeromq/zeromq.cpp
 )
 
 target_link_libraries(userdata PRIVATE Crow::Crow asio::asio)

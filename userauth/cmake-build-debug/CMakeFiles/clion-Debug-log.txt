@@ -5,7 +5,7 @@ the default-registry from vcpkg-configuration.json will be used.
 Detecting compiler hash for triplet x64-windows...
 Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
 All requested packages are currently installed.
-Total install time: 2.6 us
+Total install time: 3.2 us
 argon2 provides CMake targets:
 
     find_package(unofficial-argon2 CONFIG REQUIRED)
@@ -62,6 +62,6 @@ For more information, see the docs here:
     https://json.nlohmann.me/api/macros/json_use_implicit_conversions/
 
 -- Running vcpkg install - done
--- Configuring done (3.7s)
+-- Configuring done (5.9s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug

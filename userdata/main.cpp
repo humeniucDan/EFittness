@@ -1,6 +1,9 @@
-#include <iostream>
+#include <thread>
+#include "zeromq/zeromq.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    std::thread t{consume};
+
     return 0;
 }

@@ -3605,7 +3605,7 @@
 #define OBJ_qualityLabelledData         OBJ_pilotObjectClass,22L
 
 #define SN_userId               "UID"
-#define LN_userId               "userId"
+#define LN_userId               "nextUserId"
 #define NID_userId              458
 #define OBJ_userId              OBJ_pilotAttributeType,1L
 

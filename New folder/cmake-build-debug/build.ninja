@@ -58,6 +58,15 @@ build CMakeFiles\userdata.dir\main.cpp.obj: CXX_COMPILER__userdata_unscanned_Deb
   TARGET_COMPILE_PDB = CMakeFiles\userdata.dir\
   TARGET_PDB = userdata.pdb
 
+build CMakeFiles\userdata.dir\zeromq\zeromq.cpp.obj: CXX_COMPILER__userdata_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\New$ folder\zeromq\zeromq.cpp || cmake_object_order_depends_target_userdata
+  DEFINES = -DASIO_STANDALONE
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -I"C:\UTCN\an3\sem1\is\proj\New folder\vcpkg_installed\x64-windows\include" -I"C:\UTCN\an3\sem1\is\proj\New folder\vcpkg_installed\x64-linux\include" -external:I"C:\UTCN\an3\sem1\is\proj\New folder\cmake-build-debug\vcpkg_installed\x64-windows\include" -external:I"C:\UTCN\an3\sem1\is\proj\New folder\cmake-build-debug\vcpkg_installed\x64-windows\include\bsoncxx\v_noabi" -external:I"C:\UTCN\an3\sem1\is\proj\New folder\cmake-build-debug\vcpkg_installed\x64-windows\include\mongocxx\v_noabi" -external:W0
+  OBJECT_DIR = CMakeFiles\userdata.dir
+  OBJECT_FILE_DIR = CMakeFiles\userdata.dir\zeromq
+  TARGET_COMPILE_PDB = CMakeFiles\userdata.dir\
+  TARGET_PDB = userdata.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target userdata
@@ -66,7 +75,7 @@ build CMakeFiles\userdata.dir\main.cpp.obj: CXX_COMPILER__userdata_unscanned_Deb
 #############################################
 # Link the executable userdata.exe
 
-build userdata.exe: CXX_EXECUTABLE_LINKER__userdata_Debug CMakeFiles\userdata.dir\main.cpp.obj | vcpkg_installed\x64-windows\debug\lib\mongocxx-v_noabi-dhs-mdd.lib vcpkg_installed\x64-windows\debug\lib\bsoncxx-v_noabi-dhs-mdd.lib vcpkg_installed\x64-windows\debug\lib\libzmq-mt-gd-4_3_5.lib vcpkg_installed\x64-windows\debug\lib\libssl.lib vcpkg_installed\x64-windows\debug\lib\libcrypto.lib
+build userdata.exe: CXX_EXECUTABLE_LINKER__userdata_Debug CMakeFiles\userdata.dir\main.cpp.obj CMakeFiles\userdata.dir\zeromq\zeromq.cpp.obj | vcpkg_installed\x64-windows\debug\lib\mongocxx-v_noabi-dhs-mdd.lib vcpkg_installed\x64-windows\debug\lib\bsoncxx-v_noabi-dhs-mdd.lib vcpkg_installed\x64-windows\debug\lib\libzmq-mt-gd-4_3_5.lib vcpkg_installed\x64-windows\debug\lib\libssl.lib vcpkg_installed\x64-windows\debug\lib\libcrypto.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = vcpkg_installed\x64-windows\debug\lib\mongocxx-v_noabi-dhs-mdd.lib  vcpkg_installed\x64-windows\debug\lib\bsoncxx-v_noabi-dhs-mdd.lib  vcpkg_installed\x64-windows\debug\lib\libzmq-mt-gd-4_3_5.lib  ws2_32.lib  advapi32.lib  rpcrt4.lib  iphlpapi.lib  vcpkg_installed\x64-windows\debug\lib\libssl.lib  vcpkg_installed\x64-windows\debug\lib\libcrypto.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

@@ -27,7 +27,7 @@ int consume(){
     {
         zmq::message_t request;
         socket.recv(request, zmq::recv_flags::none);
-        std::this_thread::sleep_for(1s);
+//        std::this_thread::sleep_for(1s);
         std::cout << "Consumer received: " << request.to_string() << std::endl;
     }
 
@@ -44,7 +44,7 @@ int produce(std::string packet)
     zmq::context_t context{1};
 
     zmq::socket_t socket{context, zmq::socket_type::push};
-    socket.connect("tcp://localhost:5555");
+    socket.connect("tcp://localhost:5556");
 
 //    const std::string data{packet};
 

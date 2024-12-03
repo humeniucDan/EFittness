@@ -35,6 +35,7 @@ UserData::UserData(const std::string &json) {
 
 std::string UserData::toJson() {
     picojson::object obj;
+    obj["_id"] = picojson::value(static_cast<double>(this->_id));
     obj["firstName"] = picojson::value(this->firstName);
     obj["lastName"] = picojson::value(this->lastName);
     obj["email"] = picojson::value(this->email);
