@@ -27,7 +27,7 @@ int consume(){
     {
         zmq::message_t request;
         socket.recv(request, zmq::recv_flags::none);
-        std::this_thread::sleep_for(1s);
+//        std::this_thread::sleep_for(1s);
         std::cout << "Consumer received: " << request.to_string() << std::endl;
     }
 

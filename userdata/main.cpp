@@ -5,5 +5,7 @@ int main() {
 
     std::thread t{consume};
 
+    while(true){}
+
     return 0;
 }

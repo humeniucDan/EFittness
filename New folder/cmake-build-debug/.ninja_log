@@ -1,8 +1,0 @@
-# ninja log v5
-1	3009	7543269157839430	CMakeFiles/userdata.dir/main.cpp.obj	6ff8a655c0778765
-7	3062	7543269158359607	CMakeFiles/userdata.dir/zeromq/zeromq.cpp.obj	5f5918e4b94aa36e
-3063	4190	7543269162271838	userdata.exe	73d665eea55cdcb6
-1	2283	7543270571445575	CMakeFiles/userdata.dir/main.cpp.obj	6ff8a655c0778765
-2284	3033	7543270573035213	userdata.exe	73d665eea55cdcb6
-1	1869	7543276485190243	CMakeFiles/userdata.dir/zeromq/zeromq.cpp.obj	5f5918e4b94aa36e
-1870	2506	7543276486586226	userdata.exe	73d665eea55cdcb6

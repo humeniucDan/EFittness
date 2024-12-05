@@ -1,3 +1,0 @@
-C:/UTCN/an3/sem1/is/proj/New folder/cmake-build-debug/CMakeFiles/userdata.dir
-C:/UTCN/an3/sem1/is/proj/New folder/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/UTCN/an3/sem1/is/proj/New folder/cmake-build-debug/CMakeFiles/rebuild_cache.dir

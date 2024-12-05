@@ -1,9 +1,8 @@
-Package: jwt-cpp
-Version: 0.7.0
-Port-Version: 1
-Depends: openssl, picojson, vcpkg-cmake, vcpkg-cmake-config
+Package: asio
+Version: 1.31.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 9758eb0bfeb31acfede4fa168ec97f558a535ded60eba83f2773a7fa959987be
-Description: A header only library for creating and validating json web tokens in c++
+Abi: 55f5fa491c7f56c2653c04e558c577cc07c5f899745bd2b36856b63c2a64e88a
+Description: Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
 Status: install ok installed
