@@ -39,6 +39,8 @@ void startConsuming(){
     std::thread consumer{consume};
 }
 
+//TODO: add callback function as a parameter
+// might prefer function pointer as opposed to std::function<> for the performance gain
 int produce(std::string packet)
 {
     zmq::context_t context{1};

@@ -4,19 +4,25 @@
 
 #include "userdataRepo.h"
 
-bool insertUserDataIntoDB(const UserData& userData){
+bool insertUserDataIntoDB(std::string userDataJson){
     auto* comps = const_cast<MongodbComponents *>(getMongodbComponents());
 
     bsoncxx::builder::stream::document document_builder;
-    document_builder << "_id";
+    auto bson = bsoncxx::from_json(userDataJson);
 
-    // Finalize the document
-    bsoncxx::document::value document = document_builder << bsoncxx::builder::stream::finalize;
-
-    // Insert the document into the collection
-    auto result = comps->col.insert_one(document.view());
+    // Insert the BSON document into the MongoDB collection.
+    try {
+        comps->col.insert_one(bson.view());
+        std::cout << "User inserted successfully!" << std::endl;
+    } catch (const std::exception &e) {
+        std::cerr << "Error inserting user: " << e.what() << std::endl;
+    }
 
     return true;
+}
+
+bool insertUserDataIntoDB(UserData userData){
+    return insertUserDataIntoDB(userData.toJson());
 }
 
 std::string extractUserDataJsonByEmail(std::string email){
