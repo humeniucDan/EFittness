@@ -20,6 +20,11 @@ find_package(jwt-cpp CONFIG REQUIRED)
 add_executable(userdata
         main.cpp
         zeromq/zeromq.cpp
+        crow/routes.cpp
+        jsonwebtoken/jwtvalidation/jwtvalidation.cpp
+        mongodb/connectionlogic/connectionlogic.cpp
+        mongodb/UserDataRepo/userdataRepo.cpp
+        models/UserData/UserData.cpp
 )
 
 target_link_libraries(userdata PRIVATE Crow::Crow asio::asio)

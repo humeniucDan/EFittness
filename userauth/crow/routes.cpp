@@ -10,6 +10,8 @@
 #include "../signup/signup.h"
 
 //using Session = crow::SessionMiddleware<crow::FileStore>;
+
+///TODO: REFACTOR ROUTES
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
     CROW_ROUTE(app, "/").methods("GET"_method)
             ([&app](const crow::request& req){
@@ -39,7 +41,6 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                         // TODO: handle exceptions
                     }
                 }
-
                 crow::response rsp(200, token);
                 rsp.add_header("Set-Cookie", "jwToken="+token);
 
@@ -49,16 +50,10 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
     CROW_ROUTE(app, "/signup").methods("POST"_method)
             ([](const crow::request& req){
                 try {
-                    //  TODO: fix issues :
-                    //  - mongodb should be an auto incrementing int without collisions
-                    //  - remove password from object before sending through queue
-
-//                    int tmp = getNextUserAuthId();
                     auto rsp = crow::response(200, signup(req.body));
-
                     return rsp;
-
                 } catch (nlohmann::json::parse_error &e) {
+                    //TODO: do something
 //                    std::cout << "JSON parsing error: " << e.what() << std::endl;
                 }
                 return crow::response(200, "Hello!");

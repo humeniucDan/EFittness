@@ -7,6 +7,6 @@
 
 #define CONN_URL "mongodb+srv://koathbaht:changeme@cluster0.acsi7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 #define DB_NAME "eFitness"
-#define COLLECTION_NAME "userauth"
+#define COLLECTION_NAME "userdata"
 
 #endif //USERAUTH_DBVARIABLES_H

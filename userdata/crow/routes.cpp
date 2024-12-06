@@ -3,11 +3,8 @@
 //
 
 #include "routes.h"
-#include "../login/login.h"
-#include "../mongodb/UserAuthRepo/userauthRepo.h"
-#include "../jsonwebtoken/jwtgeneration/jwtgeneration.h"
 #include "../jsonwebtoken/jwtvalidation/jwtvalidation.h"
-#include "../signup/signup.h"
+#include "../mongodb/UserDataRepo/userdataRepo.h"
 
 //using Session = crow::SessionMiddleware<crow::FileStore>;
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
@@ -16,56 +13,23 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                 auto& ctx = app.get_context<crow::CookieParser>(req);
                 std::string jwToken = ctx.get_cookie("jwToken");
 
-                std::string retStr = validateJwToken(jwToken) ? "Valid" : "Invalid";
+                if(!validateJwToken(jwToken)){
+                    std::cout << "Invalid\n";
+                    return crow::response(401, "Invalid token");
+                }
 
-                produce(std::string());
+                std::string retStr = "";
+
+                auto decoded_token = jwt::decode(jwToken);
+
+                std::string email = "";
+                // Extract the "email" claim
+                if (decoded_token.has_payload_claim("email")) {
+                    email = decoded_token.get_payload_claim("email").as_string();
+                }
+
+                retStr = extractUserDataJsonByEmail(email);
+
                 return crow::response(200, retStr);
-            });
-
-    CROW_ROUTE(app, "/logout").methods("GET"_method)
-            ([](const crow::request& req){
-                crow::response rsp(200, "Logged out!");
-                rsp.add_header("Set-Cookie", "jwToken=");
-                return rsp;
-            });
-
-    CROW_ROUTE(app, "/login").methods("GET"_method)
-            ([](const crow::request& req){
-                std::string token;
-                try {
-                    token = login(req.body);
-                } catch (int e) {
-                    switch (e) {
-                        // TODO: handle exceptions
-                    }
-                }
-
-                crow::response rsp(200, token);
-                rsp.add_header("Set-Cookie", "jwToken="+token);
-
-                return rsp;
-            });
-
-    CROW_ROUTE(app, "/signup").methods("POST"_method)
-            ([](const crow::request& req){
-                try {
-                    //  TODO: fix issues :
-                    //  - mongodb should be an auto incrementing int without collisions
-                    //  - remove password from object before sending through queue
-
-//                    int tmp = getNextUserAuthId();
-                    auto rsp = crow::response(200, signup(req.body));
-
-                    return rsp;
-
-                } catch (nlohmann::json::parse_error &e) {
-//                    std::cout << "JSON parsing error: " << e.what() << std::endl;
-                }
-                return crow::response(200, "Hello!");
-            });
-    CROW_ROUTE(app, "/checkHighestId").methods("GET"_method)
-            ([](const crow::request& req){
-                int nextid = getNextUserAuthId();
-                return crow::response(200, std::to_string(nextid));
             });
 }

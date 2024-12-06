@@ -4,9 +4,9 @@
 
 #include "login.h"
 
-std::string hashPassword(std::string password){
-    return password;
-}
+//std::string hashPassword(std::string password){
+//    return password;
+//}
 
 std::string login(const std::string& givenUserAuthJson){
     UserAuth givenUserAuth(givenUserAuthJson);

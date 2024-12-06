@@ -23,8 +23,6 @@
 #include <crow/middlewares/cookie_parser.h>
 #include <crow/middlewares/session.h>
 
-#include "mongocxx/instance.hpp"
-
 #include "signup/signup.h"
 
 int main() {

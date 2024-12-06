@@ -9,6 +9,7 @@
 #include "../models/UserAuth/UserAuth.h"
 #include "../mongodb/UserAuthRepo/userauthRepo.h"
 #include "../jsonwebtoken/jwtgeneration/jwtgeneration.h"
+#include "../argon2/argonhelper.h"
 
 std::string login(const std::string&);
 std::string login(UserAuth);

@@ -3,7 +3,7 @@
 Detecting compiler hash for triplet x64-windows...
 Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
 All requested packages are currently installed.
-Total install time: 1.8 us
+Total install time: 1.7 us
 asio provides CMake targets:
 
   # this is heuristically generated, and may not be correct
@@ -47,21 +47,6 @@ mongo-cxx-driver provides CMake targets:
     target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:mongo::mongocxx_static>,mongo::mongocxx_static,mongo::mongocxx_shared>)
 
 -- Running vcpkg install - done
--- The C compiler identification is MSVC 19.41.34120.0
--- The CXX compiler identification is MSVC 19.41.34120.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found asio: C:/UTCN/an3/sem1/is/proj/userdata/cmake-build-debug/vcpkg_installed/x64-windows/include  
--- Found Threads: TRUE  
--- Found OpenSSL: optimized;C:/UTCN/an3/sem1/is/proj/userdata/cmake-build-debug/vcpkg_installed/x64-windows/lib/libcrypto.lib;debug;C:/UTCN/an3/sem1/is/proj/userdata/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/libcrypto.lib (found version "3.3.2")  
--- Configuring done (12.8s)
+-- Configuring done (3.7s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/UTCN/an3/sem1/is/proj/userdata/cmake-build-debug
