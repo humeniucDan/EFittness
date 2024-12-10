@@ -13,12 +13,10 @@
 
 // TODO: create dynamic object sender/receiver based on POMI
 
-int consume(){
+int consume(void (*callback)(std::string)){
     using namespace std::chrono_literals;
 
-    // initialize the zmq context with a single IO thread
     zmq::context_t context{1};
-    // construct a REP (reply) socket and bind to interface
     zmq::socket_t socket{context, zmq::socket_type::pull};
     socket.bind("tcp://*:5556");
 
@@ -27,19 +25,15 @@ int consume(){
     {
         zmq::message_t request;
         socket.recv(request, zmq::recv_flags::none);
-//        std::this_thread::sleep_for(1s);
-        std::cout << "Consumer received: " << request.to_string() << std::endl;
-    }
 
+        std::cout << "Consumer received: " << request.to_string() << std::endl;
+
+        callback(request.to_string());
+    }
     return 0;
 }
 
-//TODO: debug or deprecate
-void startConsuming(){
-    std::thread consumer{consume};
-}
-
-//TODO: add callback function as a parameter
+// TODO: add callback function as a parameter
 // might prefer function pointer as opposed to std::function<> for the performance gain
 int produce(std::string packet)
 {
@@ -47,8 +41,6 @@ int produce(std::string packet)
 
     zmq::socket_t socket{context, zmq::socket_type::push};
     socket.connect("tcp://localhost:5555");
-
-//    const std::string data{packet};
 
     socket.send(zmq::buffer(packet), zmq::send_flags::none);
     std::cout << "Producer sent: " << packet << "\n";

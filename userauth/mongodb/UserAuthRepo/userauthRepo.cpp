@@ -16,7 +16,7 @@ int getNextUserAuthId(MongodbComponents *comps){
 
     // Check if a result was found and display it.
     if (result) {
-        std::cout << "User with highest _id: " << bsoncxx::to_json(result->view()) << std::endl;
+        std::cout << "User with highest _id: " << bsoncxx::to_json(result->view())<< std::endl;
     } else {
         std::cout << "No documents found in the collection." << std::endl;
     }

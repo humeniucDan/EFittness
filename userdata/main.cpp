@@ -8,10 +8,12 @@
 #include <crow/middlewares/session.h>
 
 #include "crow/routes.h"
+#include "mongodb/UserDataRepo/userdataRepo.h"
 
 int main() {
-
-    std::thread t{consume};
+    std::thread t([](){
+        consume(insertUserDataIntoDB);
+    });
 
 //    while(true){}
     mongocxx::instance inst{};

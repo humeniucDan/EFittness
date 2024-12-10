@@ -1,11 +1,6 @@
 //
 // Created by koath on 12/3/2024.
 //
-
-#include <stdexcept>
-#include <iostream>
-#include <sstream>
-#include <iomanip>
 #include "argonhelper.h"
 
 #define ARGON2_HASH_LEN 32
@@ -36,9 +31,10 @@ std::string hashToHex(const char* hash, size_t length) {
 
 std::string hashPassword(const std::string &password) {
     char hash[ARGON2_HASH_LEN];
-    memset(hash, 0, ARGON2_SALT_LEN);
+//    memset(hash, 0, ARGON2_SALT_LEN);
+    for(int i = 0; i < ARGON2_HASH_LEN; i++) hash[i] = 0; // replacement for memset
     char salt[ARGON2_SALT_LEN] = "somesalt"; // Use a proper random salt in production
-    memset(salt, 0, ARGON2_SALT_LEN);
+    for(int i = 0; i < ARGON2_SALT_LEN; i++) salt[i] = 0; // replacement for memset
 
     if (argon2i_hash_raw(2, 1 << 16, 1, password.c_str(), password.length(), salt, ARGON2_SALT_LEN, hash, ARGON2_HASH_LEN) != ARGON2_OK) {
         throw std::runtime_error("Error hashing password");

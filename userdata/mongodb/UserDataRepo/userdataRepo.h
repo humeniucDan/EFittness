@@ -8,7 +8,8 @@
 #include "../../models/UserData/UserData.h"
 #include "../connectionlogic/connectionlogic.h"
 
-bool insertUserDataIntoDB(std::string userDataJson);
+void insertUserDataIntoDB(std::string userDataJson);
+void insertUserDataIntoDB(UserData userData);
 
 std::string extractUserDataJsonByEmail(std::string email);
 

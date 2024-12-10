@@ -1,0 +1,14 @@
+services:
+  userauth:
+    build:
+      context: ./userauth
+      dockerfile: Dockerfile
+    ports:
+      - "18080:18080" # Adjust as needed
+
+  userdata:
+    build:
+      context: ./userdata
+      dockerfile: Dockerfile
+    ports:
+      - "18081:18081" # Adjust as needed

@@ -27,8 +27,8 @@ RUN apt-get update && apt-get install -y curl zip
 RUN vcpkg/bootstrap-vcpkg.sh
 
 # Install vcpkg
-#RUN git clone https://github.com/microsoft/vcpkg.git /opt/vcpkg \
-#    && /opt/vcpkg/bootstrap-vcpkg.sh
+RUN git clone https://github.com/microsoft/vcpkg.git /opt/vcpkg \
+    && /opt/vcpkg/bootstrap-vcpkg.sh
 
 # Set vcpkg path environment variable (Optional)
 ENV VCPKG_ROOT=/vcpkg

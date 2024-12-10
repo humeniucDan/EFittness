@@ -7,6 +7,10 @@
 
 #include <string>
 #include <argon2.h>
+#include <stdexcept>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
 
 std::string hashPassword(const std::string &password);
 

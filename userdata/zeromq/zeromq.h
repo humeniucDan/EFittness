@@ -13,7 +13,7 @@
 #include <zmq.hpp>
 
 //void startConsuming();
-int consume();
+int consume(void (*callback)(std::string));
 int produce(std::string string);
 
 #endif //USERAUTH_ZEROMQ_H
