@@ -39,6 +39,8 @@ Fundamente teoretice
     Intelegere de baza a structurilior de date si algoritmilor de eficientizare
 
 Proiectarea aplicației
-    
-
-
+    Class diagram
+    Usecase diagram
+    Sequential & Colaboration diagram
+    DataBase diagram
+    etc.
