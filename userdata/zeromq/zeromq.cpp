@@ -40,7 +40,7 @@ int produce(std::string packet)
     zmq::context_t context{1};
 
     zmq::socket_t socket{context, zmq::socket_type::push};
-    socket.connect("tcp://localhost:5555");
+    socket.connect("tcp://*:5555");
 
     socket.send(zmq::buffer(packet), zmq::send_flags::none);
     std::cout << "Producer sent: " << packet << "\n";

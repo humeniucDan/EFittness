@@ -44,7 +44,7 @@ int produce(std::string packet)
     zmq::context_t context{1};
 
     zmq::socket_t socket{context, zmq::socket_type::push};
-    socket.connect("tcp://localhost:5556");
+    socket.connect("tcp://172.18.0.1:5556");
 
 //    const std::string data{packet};
 

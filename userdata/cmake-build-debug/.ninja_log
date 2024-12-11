@@ -19,3 +19,5 @@
 20	6830	7553662192671457	CMakeFiles/userdata.dir/crow/routes.cpp.obj	52d8edf1a3031573
 15	7586	7553662200192131	CMakeFiles/userdata.dir/main.cpp.obj	7fbe1d1aae8b0a5d
 7586	8769	7553662203978746	userdata.exe	ef2ff9e16960b49b
+10	3419	7555370883659226	CMakeFiles/userdata.dir/zeromq/zeromq.cpp.obj	91f265b122770e82
+3421	4941	7555370886628697	userdata.exe	ef2ff9e16960b49b
