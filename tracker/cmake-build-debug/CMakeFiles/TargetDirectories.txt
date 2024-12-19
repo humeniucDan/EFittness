@@ -1,0 +1,3 @@
+C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/CMakeFiles/tracker.dir
+C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/CMakeFiles/rebuild_cache.dir

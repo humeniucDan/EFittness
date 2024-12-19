@@ -1,0 +1,16 @@
+# ninja log v5
+22	27729	7562884190802524	CMakeFiles/tracker.dir/main.cpp.obj	73218c842e0bc2ba
+45	10692	7562884020847557	CMakeFiles/tracker.dir/jsonwebtoken/jwtvalidation/jwtvalidation.cpp.obj	7247f3a372002d27
+37	1355	7562883927340680	CMakeFiles/tracker.dir/models/timestamps/userhistorywater/WaterTimestamp.cpp.obj	65375a8adaef9a3d
+54	1313	7562883926982508	CMakeFiles/tracker.dir/models/timestamps/userhistorymeal/MealTimestamp.cpp.obj	2212458ec658af8a
+4671	6849	7562713104287366	tracker.exe	9a16f54c6d23baea
+12	16181	7562884075774291	CMakeFiles/tracker.dir/crow/routes.cpp.obj	2b31650edb0add19
+29	2513	7562883939155547	CMakeFiles/tracker.dir/models/userhistory/UserHistory.cpp.obj	9b6ac2d7161d06db
+1316	2369	7562883937741168	CMakeFiles/tracker.dir/repos/timestampconfigs/abstractrepoconfig/AbstractRepoConfig.cpp.obj	a465032d89c3fd72
+73	1330	7562883927259625	CMakeFiles/tracker.dir/models/timestamps/userhistorycardio/CardioTimestamp.cpp.obj	a7dec6318ea73057
+64	1341	7562883927269621	CMakeFiles/tracker.dir/models/timestamps/userhistoryworkout/WorkoutTimestamp.cpp.obj	295630b9c0927e6f
+82	1554	7562883929355845	CMakeFiles/tracker.dir/models/timestamps/abstracttimestamp/AbstractTimestamp.cpp.obj	7be303d3011dc452
+1330	2536	7562883939409059	CMakeFiles/tracker.dir/repos/timestampconfigs/mealsconfig/MealsConfig.cpp.obj	1817abe4d16bacd4
+91	5197	7562883965999560	CMakeFiles/tracker.dir/repos/userhistoryrepo/userhistoryrepo.cpp.obj	ebb16becd6fe4c75
+1355	6454	7562883978572275	CMakeFiles/tracker.dir/repos/watertimelinerepo/watertimelinerepo.cpp.obj	1af8dd992482ed86
+1341	5973	7562883973780868	CMakeFiles/tracker.dir/repos/timestamprepos/watertimestamprepo/watertimestamprepo.cpp.obj	19c55faf4f75f549

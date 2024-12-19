@@ -1,0 +1,30 @@
+water:
+	_id: PK
+	userId: FK
+	quantity: Int
+	cafeine(mg/100ml): Int
+	sugar(mg/100ml): Int
+	description: varchar
+meals:
+	_id: PK
+	userId: FK
+	carbs: Int
+	fats: Int
+	protein: Int
+	description: varchar
+workouts:
+	_id: PK
+	userId: FK
+	exerciceId: FK
+	reps: Int
+	weigth(kg): Int
+	description: varchar
+cardio:	
+	_id: PK
+	userId: FK
+	exerciseId: FK
+	time: ...
+	intesity: Int
+	Distance: Int
+	description: varchar
+	

@@ -1,0 +1,37 @@
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
+The following packages will be built and installed:
+    argon2:x64-windows@20190702#1 -- C:\Users\koath\AppData\Local\vcpkg\registries\git-trees\08a4ee53f1f5330c8f911dff530810c762551675
+Restored 1 package(s) from C:\Users\koath\AppData\Local\vcpkg\archives in 307 ms. Use --debug to see more details.
+Installing 1/1 argon2:x64-windows@20190702#1...
+Elapsed time to handle argon2:x64-windows: 163 ms
+argon2:x64-windows package ABI: aeb1da9249f90f68e679960890de9a956daa08f2e6b241e4d7a1681039b96bae
+Total install time: 163 ms
+argon2 provides CMake targets:
+
+    find_package(unofficial-argon2 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE unofficial::argon2::libargon2)
+
+crow provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(Crow CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE Crow::Crow asio::asio)
+
+jwt-cpp provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(jwt-cpp CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE jwt-cpp::jwt-cpp)
+
+libpqxx provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(libpqxx CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE libpqxx::pqxx)
+
+libpqxx provides pkg-config modules:
+
+  # C++ client API for the PostgreSQL database management system.
+  libpqxx
+
