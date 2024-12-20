@@ -35,7 +35,7 @@ public:
 
     CardioTimestamp(const pqxx::row& row);
 
-    CardioTimestamp(int id, int userId, const std::string &description, int exerciseId, int intensity, int distance);
+    CardioTimestamp(int id, int userId, const std::string &description, const std::string& datetime, int exerciseId, int intensity, int distance);
 
     CardioTimestamp();
 

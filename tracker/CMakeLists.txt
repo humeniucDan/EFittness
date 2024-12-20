@@ -24,14 +24,8 @@ add_executable(tracker
         models/timestamps/abstracttimestamp/AbstractTimestamp.cpp
         models/timestamps/userhistorycardio/CardioTimestamp.cpp
         repos/userhistoryrepo/userhistoryrepo.cpp
-        repos/timestampconfigs/abstractrepoconfig/AbstractRepoConfig.cpp
-        repos/timestampconfigs/mealsconfig/MealsConfig.cpp
-        repos/timelinerepos/watertimelinerepo/watertimelinerepo.cpp
-        repos/timestamprepos/watertimestamprepo/watertimestamprepo.cpp
-        repos/pqcred/pqcred.cpp
         repos/pqcred/pqcred.cpp
         repos/timelinerepos/abstracttimelinerepo/abstracttimelinerepo.cpp
-        repos/timelinerepos/abstracttimelinerepo/abstracttimelinerepo.h
 )
 
 target_link_libraries(tracker PRIVATE Crow::Crow asio::asio)

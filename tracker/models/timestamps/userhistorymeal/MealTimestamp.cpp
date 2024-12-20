@@ -50,8 +50,8 @@ std::string_view MealTimestamp::getTablename() {
 MealTimestamp::MealTimestamp(const pqxx::row& row)
         : AbstractTimestamp(row), carbs(row["carbs"].as<int>()), fats(row["fats"].as<int>()), protein(row["protein"].as<int>()), weight(row["weight"].as<int>()), calories(row["calories"].as<int>()) {}
 
-MealTimestamp::MealTimestamp(int id, int userId, const std::string &description, int carbs, int fats, int protein, int weight, int calories)
-        : AbstractTimestamp(id, userId, description), carbs(carbs), fats(fats), protein(protein), weight(weight), calories(calories) {}
+MealTimestamp::MealTimestamp(int id, int userId, const std::string &description, const std::string& datetime, int carbs, int fats, int protein, int weight, int calories)
+        : AbstractTimestamp(id, userId, description , datetime), carbs(carbs), fats(fats), protein(protein), weight(weight), calories(calories) {}
 
 MealTimestamp::MealTimestamp() {}
 

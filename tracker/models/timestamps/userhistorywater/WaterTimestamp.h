@@ -20,7 +20,7 @@ public:
 
     WaterTimestamp(const pqxx::row &row);
 
-    WaterTimestamp(int id, int userId, const std::string &description, int quantity, int caffeine, int sugar);
+    WaterTimestamp(int id, int userId, const std::string &description, const std::string& datetime, int quantity, int caffeine, int sugar);
 
     int getQuantity() const;
 

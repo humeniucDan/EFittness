@@ -35,8 +35,8 @@ std::string_view CardioTimestamp::getTablename() {
 CardioTimestamp::CardioTimestamp(const pqxx::row& row)
     : AbstractTimestamp(row), exerciseId(row["exerciseId"].as<int>()), intensity(row["intensity"].as<int>()), distance(row["distance"].as<int>()) {}
 
-CardioTimestamp::CardioTimestamp(int id, int userId, const std::string &description, int exerciseId, int intensity, int distance)
-    : AbstractTimestamp(id, userId, description), exerciseId(exerciseId), intensity(intensity), distance(distance) {}
+CardioTimestamp::CardioTimestamp(int id, int userId, const std::string &description, const std::string &datetime, int exerciseId, int intensity, int distance)
+    : AbstractTimestamp(id, userId, description, datetime), exerciseId(exerciseId), intensity(intensity), distance(distance) {}
 
 CardioTimestamp::CardioTimestamp() {}
 

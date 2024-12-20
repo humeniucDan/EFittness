@@ -28,7 +28,7 @@ public:
     static std::string_view getTablename();
 
     WorkoutTimestamp(const pqxx::row& row);
-    WorkoutTimestamp(int id, int userId, const std::string &description, int exerciseId, int reps, int weight);
+    WorkoutTimestamp(int id, int userId, const std::string &description, const std::string& datetime, int exerciseId, int reps, int weight);
     WorkoutTimestamp();
 
     std::string toJson();

@@ -9,15 +9,17 @@
 #include <string>
 #include <pqxx/pqxx>
 #include "picojson/picojson.h"
+#include <chrono>
 
 class AbstractTimestamp {
 private:
     int id;
     int userId;
+    std::chrono::system_clock::time_point datetime;
     std::string description;
 
 public:
-    AbstractTimestamp(int id, int userId, std::string description);
+    AbstractTimestamp(int id, int userId, std::string description, const std::string& datetime);
     AbstractTimestamp(const pqxx::row&);
     AbstractTimestamp();
 
@@ -27,6 +29,9 @@ public:
     void setUserId(int userId);
     const std::string &getDescription() const;
     void setDescription(const std::string &description);
+
+    const std::chrono::system_clock::time_point &getDatetime() const;
+    void setDatetime(const std::chrono::system_clock::time_point &datetime);
 
     void addToJson(picojson::object&);
 

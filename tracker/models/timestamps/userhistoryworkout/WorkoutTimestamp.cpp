@@ -34,8 +34,8 @@ std::string_view WorkoutTimestamp::getTablename() {
 WorkoutTimestamp::WorkoutTimestamp(const pqxx::row& row)
         : AbstractTimestamp(row), exerciseId(row["exerciseId"].as<int>()), reps(row["reps"].as<int>()), weight(row["weight"].as<int>()) {}
 
-WorkoutTimestamp::WorkoutTimestamp(int id, int userId, const std::string &description, int exerciseId, int reps, int weight)
-        : AbstractTimestamp(id, userId, description), exerciseId(exerciseId), reps(reps), weight(weight) {}
+WorkoutTimestamp::WorkoutTimestamp(int id, int userId, const std::string &description, const std::string& datetime, int exerciseId, int reps, int weight)
+        : AbstractTimestamp(id, userId, description, datetime), exerciseId(exerciseId), reps(reps), weight(weight) {}
 
 WorkoutTimestamp::WorkoutTimestamp() {}
 
