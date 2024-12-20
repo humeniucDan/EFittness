@@ -35,6 +35,7 @@ public:
     void setSugar(int sugar);
 
     std::string toJson();
+
     static std::string_view getTablename();
 };
 

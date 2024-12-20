@@ -4,9 +4,15 @@
 
 #include "routes.h"
 #include "../jsonwebtoken/jwtvalidation/jwtvalidation.h"
-//#include "../repos/timelinerepos/watertimelinerepo/watertimelinerepo.h"
 #include "../repos/timelinerepos/abstracttimelinerepo/abstracttimelinerepo.h"
 #include "../models/timestamps/userhistorywater/WaterTimestamp.h"
+#include "../models/timestamps/userhistorycardio/CardioTimestamp.h"
+#include "../models/timestamps/userhistorymeal/MealTimestamp.h"
+#include "../models/timestamps/userhistoryworkout/WorkoutTimestamp.h"
+#include "../repos/userhistoryrepo/userhistoryrepo.h"
+#include "../models/userhistory/UserHistory.h"
+
+//#include "../repos/timelinerepos/watertimelinerepo/watertimelinerepo.h"
 
 //using Session = crow::SessionMiddleware<crow::FileStore>;
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
@@ -24,18 +30,16 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 
                 auto decoded_token = jwt::decode(jwToken);
 
-                std::string id;
+                int id;
                 // Extract the "email" claim
                 if (decoded_token.has_payload_claim("_id")) {
-                    id = decoded_token.get_payload_claim("_id").as_string();
+                    id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
                 }
 
-//                std::vector<WaterTimestamp> waters = extractWaterTimelineByUserId(std::stoi(id));
-                std::vector<WaterTimestamp> waters = extractTimelineByUserId<WaterTimestamp>(std::stoi(id));
-                for(auto &water: waters){
-                    std::cout << water.getId() << "\n";
-                }
+                UserHistory* userHistory = extractUserHistoryByUserId(id);
+                std::string jsonStr = userHistory->toJson();
+                delete userHistory;
 
-                return crow::response(200, id);
+                return crow::response(200, jsonStr);
             });
 }

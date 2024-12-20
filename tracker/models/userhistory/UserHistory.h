@@ -12,6 +12,8 @@
 #include "../timestamps/userhistorycardio/CardioTimestamp.h"
 #include "../timestamps/userhistorywater/WaterTimestamp.h"
 
+#include <chrono>
+
 class UserHistory {
 private:
     std::vector<WorkoutTimestamp> workouts;
@@ -37,7 +39,45 @@ public:
 
     const std::vector<WaterTimestamp> &getWaters() const;
     void setWaters(const std::vector<WaterTimestamp> &waters);
-};
 
+    /// TODO: Implement toJsonValue for all classes
+
+    std::string toJson() {
+        picojson::object jsonObject;
+        picojson::array workoutsArray;
+        picojson::array mealsArray;
+        picojson::array cardiosArray;
+        picojson::array watersArray;
+
+        for (auto& workout : workouts) {
+            picojson::value workoutJson;
+            picojson::parse(workoutJson, workout.toJson());
+            workoutsArray.push_back(workoutJson);
+        }
+
+        for (auto& meal : meals) {
+            mealsArray.push_back(meal.toJsonValue());
+        }
+
+        for (auto& cardio : cardios) {
+            picojson::value cardioJson;
+            picojson::parse(cardioJson, cardio.toJson());
+            cardiosArray.push_back(cardioJson);
+        }
+
+        for (auto& water : waters) {
+            picojson::value waterJson;
+            picojson::parse(waterJson, water.toJson());
+            watersArray.push_back(waterJson);
+        }
+
+        jsonObject["workouts"] = picojson::value(workoutsArray);
+        jsonObject["meals"] = picojson::value(mealsArray);
+        jsonObject["cardios"] = picojson::value(cardiosArray);
+        jsonObject["waters"] = picojson::value(watersArray);
+
+        return picojson::value(jsonObject).serialize();
+    }
+};
 
 #endif //TRACKER_USERHISTORY_H

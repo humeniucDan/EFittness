@@ -196,8 +196,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 // during RELWITHDEBINFO builds.
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:\Users\koath\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/Users/koath/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -219,23 +219,6 @@ OPENSSL_APPLINK_SOURCE:FILEPATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-de
 
 //Path to a file.
 OPENSSL_INCLUDE_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/include
-
-//The Set the PostgreSQL_INCLUDE_DIR cmake cache entry to the top-level
-// directory containing the PostgreSQL include directories. E.g
-// /usr/local/include/PostgreSQL/8.4 or C:/Program Files/PostgreSQL/8.4/include
-PostgreSQL_INCLUDE_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/include
-
-//Path to a library.
-PostgreSQL_LIBRARY_DEBUG:FILEPATH=PostgreSQL_LIBRARY_DEBUG-NOTFOUND
-
-//The Set the PostgreSQL_LIBRARY_DIR cmake cache entry to the top-level
-// directory containing the PostgreSQL libraries.
-PostgreSQL_LIBRARY_RELEASE:FILEPATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/libpq.lib
-
-//The Set the PostgreSQL_INCLUDE_DIR cmake cache entry to the top-level
-// directory containing the PostgreSQL include directories. E.g
-// /usr/local/include/PostgreSQL/8.4 or C:/Program Files/PostgreSQL/8.4/include
-PostgreSQL_TYPE_INCLUDE_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/include/server
 
 //Path to a library.
 SSL_EAY_DEBUG:FILEPATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/libssl.lib
@@ -328,9 +311,6 @@ cppzmq_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_instal
 
 //The directory containing a CMake configuration file for jwt-cpp.
 jwt-cpp_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/jwt-cpp
-
-//The directory containing a CMake configuration file for libpqxx.
-libpqxx_DIR:PATH=libpqxx_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for mongoc-1.0.
 mongoc-1.0_DIR:PATH=C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/mongoc-1.0
@@ -505,8 +485,6 @@ CMAKE_TOOLCHAIN_FILE-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[optimized;C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/lib/libcrypto.lib;debug;C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/libcrypto.lib][C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/include][c ][v3.3.2()]
-//Details about finding PostgreSQL
-FIND_PACKAGE_MESSAGE_DETAILS_PostgreSQL:INTERNAL=[C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/debug/lib/libpq.lib][C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/include][c ][v16.4()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding asio
@@ -515,14 +493,6 @@ FIND_PACKAGE_MESSAGE_DETAILS_asio:INTERNAL=[C:/UTCN/an3/sem1/is/proj/userauth/cm
 FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[C:/UTCN/an3/sem1/is/proj/userauth/cmake-build-debug/vcpkg_installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.3()]
 //ADVANCED property for variable: OPENSSL_INCLUDE_DIR
 OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PostgreSQL_INCLUDE_DIR
-PostgreSQL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PostgreSQL_LIBRARY_DEBUG
-PostgreSQL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PostgreSQL_LIBRARY_RELEASE
-PostgreSQL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PostgreSQL_TYPE_INCLUDE_DIR
-PostgreSQL_TYPE_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VCPKG_VERBOSE
 VCPKG_VERBOSE-ADVANCED:INTERNAL=1
 //Making sure VCPKG_MANIFEST_MODE doesn't change

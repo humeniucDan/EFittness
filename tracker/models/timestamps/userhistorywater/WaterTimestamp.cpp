@@ -30,9 +30,14 @@ int WaterTimestamp::getSugar() const {
 void WaterTimestamp::setSugar(int sugar) {
     WaterTimestamp::sugar = sugar;
 }
+
 std::string WaterTimestamp::toJson(){
     picojson::object jsonObject;
-    return "";
+    this->addToJson(jsonObject);
+    jsonObject["quantity"] = picojson::value(static_cast<double>(quantity));
+    jsonObject["caffeine"] = picojson::value(static_cast<double>(caffeine));
+    jsonObject["sugar"] = picojson::value(static_cast<double>(sugar));
+    return picojson::value(jsonObject).serialize();
 }
 
 std::string_view WaterTimestamp::getTablename(){

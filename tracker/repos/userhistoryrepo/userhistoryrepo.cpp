@@ -3,13 +3,14 @@
 //
 
 #include "userhistoryrepo.h"
-#include "../timelinerepos/watertimelinerepo/watertimelinerepo.h"
+#include "../timelinerepos/abstracttimelinerepo/abstracttimelinerepo.h"
+#include "pqxx/pqxx"
 
 UserHistory* extractUserHistoryByUserId(int id){
     return new UserHistory(
-            {}, //extractWorkoutTimelineByUserId(id),
-            {}, //extractMealsTimelineByUserId(id),
-            {},  //extractCardioTimelineByUserId(id)
-            extractWaterTimelineByUserId(id)
+            extractTimelineByUserId<WorkoutTimestamp>(id), //extractWorkoutTimelineByUserId(id),
+            extractTimelineByUserId<MealTimestamp>(id), //extractMealsTimelineByUserId(id),
+            extractTimelineByUserId<CardioTimestamp>(id),  //extractCardioTimelineByUserId(id)
+            extractTimelineByUserId<WaterTimestamp>(id) //extractWaterTimelineByUserId(id)
     );
 }

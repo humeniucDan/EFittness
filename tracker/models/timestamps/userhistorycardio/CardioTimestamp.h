@@ -6,12 +6,17 @@
 #define TRACKER_CARDIOTIMESTAMP_H
 
 #include <string>
+#include "../abstracttimestamp/AbstractTimestamp.h"
+#include <pqxx/pqxx>
 
-class CardioTimestamp {
+class CardioTimestamp: public AbstractTimestamp{
 private:
     int exerciseId;
 //    std::string time; // Using string for interval representation
     int intensity;
+    int distance;
+
+    constexpr static std::string_view tableName = "cardio_timeline";
 
 public:
     int getExerciseId() const;
@@ -26,7 +31,15 @@ public:
 
     void setDistance(int distance);
 
-    int distance;
+    std::string toJson();
+
+    CardioTimestamp(const pqxx::row& row);
+
+    CardioTimestamp(int id, int userId, const std::string &description, int exerciseId, int intensity, int distance);
+
+    CardioTimestamp();
+
+    static std::string_view getTablename();
 };
 
 

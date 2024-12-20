@@ -8,5 +8,12 @@
       <jdbc-url>mongodb+srv://cluster0.acsi7.mongodb.net/?retryWrites=true&amp;w=majority&amp;appName=Cluster0</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="postgres@localhost" uuid="2e61f1d9-3121-47b5-8bcf-4202415bd417">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
