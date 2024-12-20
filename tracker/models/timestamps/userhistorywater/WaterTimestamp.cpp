@@ -30,8 +30,18 @@ int WaterTimestamp::getSugar() const {
 void WaterTimestamp::setSugar(int sugar) {
     WaterTimestamp::sugar = sugar;
 }
+std::string WaterTimestamp::toJson(){
+    picojson::object jsonObject;
+    return "";
+}
+
+std::string_view WaterTimestamp::getTablename(){
+    return WaterTimestamp::tableName;
+}
 
 WaterTimestamp::WaterTimestamp(int id, int userId, const std::string &description, int quantity, int caffeine, int sugar)
     : AbstractTimestamp(id, userId, description), quantity(quantity), caffeine(caffeine), sugar(sugar) {}
+WaterTimestamp::WaterTimestamp(const pqxx::row& row)
+        : AbstractTimestamp(row), quantity(row["quantity"].as<int>()), caffeine(row["caffeine"].as<int>()), sugar(row["sugar"].as<int>()) {}
 
 

@@ -32,14 +32,14 @@ CONFIGURATION = Debug
 #############################################
 # Include rules file.
 
-include CMakeFiles/rules.ninja
+include CMakeFiles\rules.ninja
 
 # =============================================================================
 
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/
+cmake_ninja_workdir = C$:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\
 # =============================================================================
 # Object build statements for EXECUTABLE target tracker
 
@@ -47,119 +47,151 @@ cmake_ninja_workdir = C$:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/
 #############################################
 # Order-only phony target for tracker
 
-build cmake_object_order_depends_target_tracker: phony || CMakeFiles/tracker.dir
+build cmake_object_order_depends_target_tracker: phony || CMakeFiles\tracker.dir
 
-build CMakeFiles/tracker.dir/main.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/main.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\main.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\main.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/crow/routes.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/crow/routes.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\crow\routes.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\crow\routes.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\crow\routes.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\crow
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/jsonwebtoken/jwtvalidation/jwtvalidation.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/jsonwebtoken/jwtvalidation/jwtvalidation.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\jsonwebtoken\jwtvalidation\jwtvalidation.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\jsonwebtoken\jwtvalidation\jwtvalidation.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\jsonwebtoken\jwtvalidation\jwtvalidation.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\jsonwebtoken\jwtvalidation
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/models/userhistory/UserHistory.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/models/userhistory/UserHistory.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\models\userhistory\UserHistory.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\models\userhistory\UserHistory.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\models\userhistory\UserHistory.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\models\userhistory
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/models/timestamps/userhistorywater/WaterTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/models/timestamps/userhistorywater/WaterTimestamp.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\models\timestamps\userhistorywater\WaterTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\models\timestamps\userhistorywater\WaterTimestamp.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\models\timestamps\userhistorywater\WaterTimestamp.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\models\timestamps\userhistorywater
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/models/timestamps/userhistorymeal/MealTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/models/timestamps/userhistorymeal/MealTimestamp.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\models\timestamps\userhistorymeal\MealTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\models\timestamps\userhistorymeal\MealTimestamp.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\models\timestamps\userhistorymeal\MealTimestamp.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\models\timestamps\userhistorymeal
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/models/timestamps/userhistoryworkout/WorkoutTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/models/timestamps/userhistoryworkout/WorkoutTimestamp.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\models\timestamps\userhistoryworkout\WorkoutTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\models\timestamps\userhistoryworkout\WorkoutTimestamp.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\models\timestamps\userhistoryworkout\WorkoutTimestamp.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\models\timestamps\userhistoryworkout
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/models/timestamps/abstracttimestamp/AbstractTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/models/timestamps/abstracttimestamp/AbstractTimestamp.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\models\timestamps\abstracttimestamp\AbstractTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\models\timestamps\abstracttimestamp\AbstractTimestamp.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\models\timestamps\abstracttimestamp\AbstractTimestamp.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\models\timestamps\abstracttimestamp
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/models/timestamps/userhistorycardio/CardioTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/models/timestamps/userhistorycardio/CardioTimestamp.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\models\timestamps\userhistorycardio\CardioTimestamp.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\models\timestamps\userhistorycardio\CardioTimestamp.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\models\timestamps\userhistorycardio\CardioTimestamp.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\models\timestamps\userhistorycardio
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/repos/userhistoryrepo/userhistoryrepo.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/repos/userhistoryrepo/userhistoryrepo.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\repos\userhistoryrepo\userhistoryrepo.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\repos\userhistoryrepo\userhistoryrepo.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\repos\userhistoryrepo\userhistoryrepo.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\userhistoryrepo
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/repos/timestampconfigs/abstractrepoconfig/AbstractRepoConfig.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/repos/timestampconfigs/abstractrepoconfig/AbstractRepoConfig.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\repos\timestampconfigs\abstractrepoconfig\AbstractRepoConfig.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\repos\timestampconfigs\abstractrepoconfig\AbstractRepoConfig.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\repos\timestampconfigs\abstractrepoconfig\AbstractRepoConfig.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\timestampconfigs\abstractrepoconfig
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/repos/timestampconfigs/mealsconfig/MealsConfig.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/repos/timestampconfigs/mealsconfig/MealsConfig.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\repos\timestampconfigs\mealsconfig\MealsConfig.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\repos\timestampconfigs\mealsconfig\MealsConfig.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\repos\timestampconfigs\mealsconfig\MealsConfig.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\timestampconfigs\mealsconfig
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/repos/watertimelinerepo/watertimelinerepo.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/repos/watertimelinerepo/watertimelinerepo.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\repos\timelinerepos\watertimelinerepo\watertimelinerepo.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\repos\timelinerepos\watertimelinerepo\watertimelinerepo.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\repos\watertimelinerepo\watertimelinerepo.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
-  OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\watertimelinerepo
+  OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\timelinerepos\watertimelinerepo
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
-build CMakeFiles/tracker.dir/repos/timestamprepos/watertimestamprepo/watertimestamprepo.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:/UTCN/an3/sem1/is/proj/tracker/repos/timestamprepos/watertimestamprepo/watertimestamprepo.cpp || cmake_object_order_depends_target_tracker
+build CMakeFiles\tracker.dir\repos\timestamprepos\watertimestamprepo\watertimestamprepo.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\repos\timestamprepos\watertimestamprepo\watertimestamprepo.cpp || cmake_object_order_depends_target_tracker
   DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
-  DEP_FILE = CMakeFiles\tracker.dir\repos\timestamprepos\watertimestamprepo\watertimestamprepo.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows/include -IC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux/include -isystem C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/include
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\timestamprepos\watertimestamprepo
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
+
+build CMakeFiles\tracker.dir\repos\pqcred\pqcred.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\repos\pqcred\pqcred.cpp || cmake_object_order_depends_target_tracker
+  DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\tracker.dir
+  OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\pqcred
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
+
+build CMakeFiles\tracker.dir\repos\timelinerepos\abstracttimelinerepo\abstracttimelinerepo.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\repos\timelinerepos\abstracttimelinerepo\abstracttimelinerepo.cpp || cmake_object_order_depends_target_tracker
+  DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\tracker.dir
+  OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\timelinerepos\abstracttimelinerepo
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
 
 
 # =============================================================================
@@ -169,39 +201,41 @@ build CMakeFiles/tracker.dir/repos/timestamprepos/watertimestamprepo/watertimest
 #############################################
 # Link the executable tracker.exe
 
-build tracker.exe: CXX_EXECUTABLE_LINKER__tracker_Debug CMakeFiles/tracker.dir/main.cpp.obj CMakeFiles/tracker.dir/crow/routes.cpp.obj CMakeFiles/tracker.dir/jsonwebtoken/jwtvalidation/jwtvalidation.cpp.obj CMakeFiles/tracker.dir/models/userhistory/UserHistory.cpp.obj CMakeFiles/tracker.dir/models/timestamps/userhistorywater/WaterTimestamp.cpp.obj CMakeFiles/tracker.dir/models/timestamps/userhistorymeal/MealTimestamp.cpp.obj CMakeFiles/tracker.dir/models/timestamps/userhistoryworkout/WorkoutTimestamp.cpp.obj CMakeFiles/tracker.dir/models/timestamps/abstracttimestamp/AbstractTimestamp.cpp.obj CMakeFiles/tracker.dir/models/timestamps/userhistorycardio/CardioTimestamp.cpp.obj CMakeFiles/tracker.dir/repos/userhistoryrepo/userhistoryrepo.cpp.obj CMakeFiles/tracker.dir/repos/timestampconfigs/abstractrepoconfig/AbstractRepoConfig.cpp.obj CMakeFiles/tracker.dir/repos/timestampconfigs/mealsconfig/MealsConfig.cpp.obj CMakeFiles/tracker.dir/repos/watertimelinerepo/watertimelinerepo.cpp.obj CMakeFiles/tracker.dir/repos/timestamprepos/watertimestamprepo/watertimestamprepo.cpp.obj | vcpkg_installed/x64-windows/debug/lib/pqxx.lib vcpkg_installed/x64-windows/debug/lib/libssl.lib vcpkg_installed/x64-windows/debug/lib/libcrypto.lib
-  FLAGS = -g
-  LINK_LIBRARIES = vcpkg_installed/x64-windows/debug/lib/pqxx.lib  -lwsock32  -lws2_32  vcpkg_installed/x64-windows/debug/lib/libssl.lib  vcpkg_installed/x64-windows/debug/lib/libcrypto.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  LINK_PATH = -LC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-windows   -LC:/UTCN/an3/sem1/is/proj/tracker/vcpkg_installed/x64-linux
+build tracker.exe: CXX_EXECUTABLE_LINKER__tracker_Debug CMakeFiles\tracker.dir\main.cpp.obj CMakeFiles\tracker.dir\crow\routes.cpp.obj CMakeFiles\tracker.dir\jsonwebtoken\jwtvalidation\jwtvalidation.cpp.obj CMakeFiles\tracker.dir\models\userhistory\UserHistory.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistorywater\WaterTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistorymeal\MealTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistoryworkout\WorkoutTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\abstracttimestamp\AbstractTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistorycardio\CardioTimestamp.cpp.obj CMakeFiles\tracker.dir\repos\userhistoryrepo\userhistoryrepo.cpp.obj CMakeFiles\tracker.dir\repos\timestampconfigs\abstractrepoconfig\AbstractRepoConfig.cpp.obj CMakeFiles\tracker.dir\repos\timestampconfigs\mealsconfig\MealsConfig.cpp.obj CMakeFiles\tracker.dir\repos\timelinerepos\watertimelinerepo\watertimelinerepo.cpp.obj CMakeFiles\tracker.dir\repos\timestamprepos\watertimestamprepo\watertimestamprepo.cpp.obj CMakeFiles\tracker.dir\repos\pqcred\pqcred.cpp.obj CMakeFiles\tracker.dir\repos\timelinerepos\abstracttimelinerepo\abstracttimelinerepo.cpp.obj | vcpkg_installed\x64-windows\debug\lib\pqxx.lib vcpkg_installed\x64-windows\debug\lib\libssl.lib vcpkg_installed\x64-windows\debug\lib\libcrypto.lib
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = vcpkg_installed\x64-windows\debug\lib\pqxx.lib  wsock32.lib  ws2_32.lib  vcpkg_installed\x64-windows\debug\lib\libssl.lib  vcpkg_installed\x64-windows\debug\lib\libcrypto.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_PATH = -LIBPATH:C:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows   -LIBPATH:C:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux
   OBJECT_DIR = CMakeFiles\tracker.dir
   POST_BUILD = cmd.exe /C "cd /D C:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/koath/.vcpkg-clion/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/tracker.exe -installedDir C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/vcpkg_installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
   TARGET_FILE = tracker.exe
-  TARGET_IMPLIB = libtracker.dll.a
-  TARGET_PDB = tracker.exe.dbg
+  TARGET_IMPLIB = tracker.lib
+  TARGET_PDB = tracker.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
-build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
   COMMAND = cmd.exe /C "cd /D C:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug && "C:\cLion\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build edit_cache: phony CMakeFiles/edit_cache.util
+build edit_cache: phony CMakeFiles\edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
   COMMAND = cmd.exe /C "cd /D C:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug && "C:\cLion\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\UTCN\an3\sem1\is\proj\tracker -BC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Target aliases.
@@ -225,14 +259,14 @@ build all: phony tracker.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/UTCN/an3/sem1/is/proj/tracker/CMakeLists.txt C$:/UTCN/an3/sem1/is/proj/tracker/vcpkg-configuration.json C$:/UTCN/an3/sem1/is/proj/tracker/vcpkg.json C$:/Users/koath/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindOpenSSL.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPostgreSQL.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindThreads.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake vcpkg_installed/x64-windows/share/crow/CrowConfig.cmake vcpkg_installed/x64-windows/share/crow/CrowTargets.cmake vcpkg_installed/x64-windows/share/crow/Findasio.cmake vcpkg_installed/x64-windows/share/jwt-cpp/jwt-cpp-config-version.cmake vcpkg_installed/x64-windows/share/jwt-cpp/jwt-cpp-config.cmake vcpkg_installed/x64-windows/share/jwt-cpp/jwt-cpp-targets.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-config-version.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-config.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-targets-debug.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-targets-release.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-targets.cmake vcpkg_installed/x64-windows/share/openssl/vcpkg-cmake-wrapper.cmake vcpkg_installed/x64-windows/share/postgresql/vcpkg-cmake-wrapper.cmake
+build build.ninja: RERUN_CMAKE | C$:\UTCN\an3\sem1\is\proj\tracker\CMakeLists.txt C$:\UTCN\an3\sem1\is\proj\tracker\vcpkg-configuration.json C$:\UTCN\an3\sem1\is\proj\tracker\vcpkg.json C$:\Users\koath\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeDependentOption.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckIncludeFile.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckLibraryExists.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindOpenSSL.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPackageMessage.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPostgreSQL.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindThreads.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles\3.26.4\CMakeCCompiler.cmake CMakeFiles\3.26.4\CMakeCXXCompiler.cmake CMakeFiles\3.26.4\CMakeRCCompiler.cmake CMakeFiles\3.26.4\CMakeSystem.cmake vcpkg_installed\x64-windows\share\crow\CrowConfig.cmake vcpkg_installed\x64-windows\share\crow\CrowTargets.cmake vcpkg_installed\x64-windows\share\crow\Findasio.cmake vcpkg_installed\x64-windows\share\jwt-cpp\jwt-cpp-config-version.cmake vcpkg_installed\x64-windows\share\jwt-cpp\jwt-cpp-config.cmake vcpkg_installed\x64-windows\share\jwt-cpp\jwt-cpp-targets.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-config-version.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-config.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-targets-debug.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-targets-release.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-targets.cmake vcpkg_installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake vcpkg_installed\x64-windows\share\postgresql\vcpkg-cmake-wrapper.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/UTCN/an3/sem1/is/proj/tracker/CMakeLists.txt C$:/UTCN/an3/sem1/is/proj/tracker/vcpkg-configuration.json C$:/UTCN/an3/sem1/is/proj/tracker/vcpkg.json C$:/Users/koath/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindOpenSSL.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPostgreSQL.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindThreads.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/cLion/CLion$ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake vcpkg_installed/x64-windows/share/crow/CrowConfig.cmake vcpkg_installed/x64-windows/share/crow/CrowTargets.cmake vcpkg_installed/x64-windows/share/crow/Findasio.cmake vcpkg_installed/x64-windows/share/jwt-cpp/jwt-cpp-config-version.cmake vcpkg_installed/x64-windows/share/jwt-cpp/jwt-cpp-config.cmake vcpkg_installed/x64-windows/share/jwt-cpp/jwt-cpp-targets.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-config-version.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-config.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-targets-debug.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-targets-release.cmake vcpkg_installed/x64-windows/share/libpqxx/libpqxx-targets.cmake vcpkg_installed/x64-windows/share/openssl/vcpkg-cmake-wrapper.cmake vcpkg_installed/x64-windows/share/postgresql/vcpkg-cmake-wrapper.cmake: phony
+build C$:\UTCN\an3\sem1\is\proj\tracker\CMakeLists.txt C$:\UTCN\an3\sem1\is\proj\tracker\vcpkg-configuration.json C$:\UTCN\an3\sem1\is\proj\tracker\vcpkg.json C$:\Users\koath\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeDependentOption.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeFindDependencyMacro.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckIncludeFile.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\CheckLibraryExists.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindOpenSSL.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPackageMessage.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindPostgreSQL.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\FindThreads.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\cLion\CLion$ 2023.2.2\bin\cmake\win\x64\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles\3.26.4\CMakeCCompiler.cmake CMakeFiles\3.26.4\CMakeCXXCompiler.cmake CMakeFiles\3.26.4\CMakeRCCompiler.cmake CMakeFiles\3.26.4\CMakeSystem.cmake vcpkg_installed\x64-windows\share\crow\CrowConfig.cmake vcpkg_installed\x64-windows\share\crow\CrowTargets.cmake vcpkg_installed\x64-windows\share\crow\Findasio.cmake vcpkg_installed\x64-windows\share\jwt-cpp\jwt-cpp-config-version.cmake vcpkg_installed\x64-windows\share\jwt-cpp\jwt-cpp-config.cmake vcpkg_installed\x64-windows\share\jwt-cpp\jwt-cpp-targets.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-config-version.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-config.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-targets-debug.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-targets-release.cmake vcpkg_installed\x64-windows\share\libpqxx\libpqxx-targets.cmake vcpkg_installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake vcpkg_installed\x64-windows\share\postgresql\vcpkg-cmake-wrapper.cmake: phony
 
 
 #############################################

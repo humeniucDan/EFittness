@@ -8,6 +8,6 @@
 #include <pqxx/pqxx>
 #include "../../../models/timestamps/userhistorywater/WaterTimestamp.h"
 
-WaterTimestamp parseWaterTimestampRow(pqxx::row);
+WaterTimestamp parseWaterTimestampRow(const pqxx::row&);
 
 #endif //TRACKER_WATERTIMESTAMPREPO_H

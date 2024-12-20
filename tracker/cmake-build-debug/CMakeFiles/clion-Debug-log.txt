@@ -2,13 +2,8 @@
 -- Running vcpkg install
 Detecting compiler hash for triplet x64-windows...
 Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe
-The following packages will be built and installed:
-    argon2:x64-windows@20190702#1 -- C:\Users\koath\AppData\Local\vcpkg\registries\git-trees\08a4ee53f1f5330c8f911dff530810c762551675
-Restored 1 package(s) from C:\Users\koath\AppData\Local\vcpkg\archives in 307 ms. Use --debug to see more details.
-Installing 1/1 argon2:x64-windows@20190702#1...
-Elapsed time to handle argon2:x64-windows: 163 ms
-argon2:x64-windows package ABI: aeb1da9249f90f68e679960890de9a956daa08f2e6b241e4d7a1681039b96bae
-Total install time: 163 ms
+All requested packages are currently installed.
+Total install time: 1.2 us
 argon2 provides CMake targets:
 
     find_package(unofficial-argon2 CONFIG REQUIRED)
@@ -38,12 +33,6 @@ libpqxx provides pkg-config modules:
   libpqxx
 
 -- Running vcpkg install - done
--- Configuring done (6.2s)
+-- Configuring done (6.7s)
 -- Generating done (0.0s)
-CMake Warning:
-  Manually-specified variables were not used by the project:
-
-    CMAKE_TOOLCHAIN_FILE
-
-
 -- Build files have been written to: C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug

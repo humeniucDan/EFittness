@@ -7,6 +7,8 @@
 
 
 #include <string>
+#include <pqxx/pqxx>
+#include "picojson/picojson.h"
 
 class AbstractTimestamp {
 private:
@@ -15,8 +17,8 @@ private:
     std::string description;
 
 public:
-    AbstractTimestamp(int id, int userId, const std::string &description);
-
+    AbstractTimestamp(int id, int userId, std::string description);
+    AbstractTimestamp(const pqxx::row&);
     AbstractTimestamp();
 
     int getId() const;
@@ -25,6 +27,10 @@ public:
     void setUserId(int userId);
     const std::string &getDescription() const;
     void setDescription(const std::string &description);
+
+    void addToJson(picojson::object&);
+
+    static std::string_view getTablename();
 };
 
 

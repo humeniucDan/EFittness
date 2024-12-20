@@ -1,0 +1,20 @@
+//
+// Created by koath on 12/17/2024.
+//
+
+#ifndef TRACKER_WATERTIMELINEREPO_H
+#define TRACKER_WATERTIMELINEREPO_H
+
+
+#include <vector>
+#include "../../../models/timestamps/userhistorywater/WaterTimestamp.h"
+#include "pqxx/pqxx"
+#include <iostream>
+#include "../../pqcred/pqcred.h"
+#include "../../timestamprepos/watertimestamprepo/watertimestamprepo.h"
+#include "../../pqcred/pqcred.h"
+
+std::vector<WaterTimestamp> extractWaterTimelineByUserId(int);
+// insert also needed
+
+#endif //TRACKER_WATERTIMELINEREPO_H

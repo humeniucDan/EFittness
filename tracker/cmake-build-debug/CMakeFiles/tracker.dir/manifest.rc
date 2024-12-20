@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug/CMakeFiles/tracker.dir/embed.manifest"

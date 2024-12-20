@@ -4,7 +4,7 @@
 
 #include "watertimestamprepo.h"
 
-WaterTimestamp parseWaterTimestampRow(pqxx::row row) {
+WaterTimestamp parseWaterTimestampRow(const pqxx::row& row) {
     WaterTimestamp waterTimestamp(
             row["id"].as<int>(),
             row["userId"].as<int>(),
@@ -12,7 +12,7 @@ WaterTimestamp parseWaterTimestampRow(pqxx::row row) {
             row["quantity"].as<int>(),
             row["caffeine"].as<int>(),
             row["sugar"].as<int>()
-            );
+    );
 
     return waterTimestamp;
 }

@@ -8,14 +8,17 @@
 #include <string>
 #include "../abstracttimestamp/AbstractTimestamp.h"
 
-class WaterTimestamp:AbstractTimestamp{
+class WaterTimestamp: public AbstractTimestamp{
 private:
     int quantity{};
     int caffeine{};
     int sugar{};
+    constexpr static std::string_view tableName = "water_timeline";
 
 public:
     WaterTimestamp();
+
+    WaterTimestamp(const pqxx::row &row);
 
     WaterTimestamp(int id, int userId, const std::string &description, int quantity, int caffeine, int sugar);
 
@@ -30,6 +33,9 @@ public:
     int getSugar() const;
 
     void setSugar(int sugar);
+
+    std::string toJson();
+    static std::string_view getTablename();
 };
 
 

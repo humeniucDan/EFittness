@@ -1,9 +1,0 @@
-Package: argon2
-Version: 20190702
-Port-Version: 1
-Depends: vcpkg-cmake, vcpkg-cmake-config
-Architecture: x64-windows
-Multi-Arch: same
-Abi: aeb1da9249f90f68e679960890de9a956daa08f2e6b241e4d7a1681039b96bae
-Description: Password-hashing library.
-Status: install ok installed

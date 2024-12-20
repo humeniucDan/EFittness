@@ -3,7 +3,7 @@
 //
 
 #include "userhistoryrepo.h"
-#include "../watertimelinerepo/watertimelinerepo.h"
+#include "../timelinerepos/watertimelinerepo/watertimelinerepo.h"
 
 UserHistory* extractUserHistoryByUserId(int id){
     return new UserHistory(
