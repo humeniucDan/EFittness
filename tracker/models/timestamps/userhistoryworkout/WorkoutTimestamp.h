@@ -13,6 +13,7 @@ private:
     int exerciseId;
     int reps;
     int weight;
+    /// TODO: add exercise here
 public:
     static const std::string tableName;
 

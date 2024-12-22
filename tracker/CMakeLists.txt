@@ -37,6 +37,9 @@ add_executable(tracker
         models/static/muscle/Muscle.h
         models/static/equipment/Equipment.cpp
         models/static/equipment/Equipment.h
+        repos/staticrepos/exereciserepo/exerciserepo.cpp
+        repos/staticrepos/exereciserepo/exerciserepo.h
+        repos/staticrepos/exereciserepo/exerciserepo.h
 )
 
 target_link_libraries(tracker PRIVATE Crow::Crow asio::asio)

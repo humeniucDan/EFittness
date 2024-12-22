@@ -7,8 +7,9 @@
 #include "pqxx/pqxx"
 
 UserHistory* extractUserHistoryByUserId(int id){
-    /// TODO: initialize just one connection and pass it around
-
+    /// TODO: maybe use a connection pool
+    /// TODO: extract the workout timeline and add exercise names to the timeline
+    /// or redo the timeline to include the exercise name
     return new UserHistory(
             extractTimelineByUserId<WorkoutTimestamp>(id), //extractWorkoutTimelineByUserId(id),
             extractTimelineByUserId<MealTimestamp>(id), //extractMealsTimelineByUserId(id),

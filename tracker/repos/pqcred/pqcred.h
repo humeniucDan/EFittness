@@ -15,9 +15,4 @@
 
 pqxx::connection* createPGConn();
 
-//#define TABLE_NAME postgres
-
-
-// dbname=testdb user=testuser password=secretpassword host=localhost port=5432
-
 #endif //TRACKER_PQCRED_H

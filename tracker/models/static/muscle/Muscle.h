@@ -30,6 +30,8 @@ public:
     void setWorkedBy(const std::vector<Exercise> &workedBy);
 
     Muscle(int id, const std::string &name, const std::vector<Exercise> &workedBy);
+
+    Muscle();
 };
 
 

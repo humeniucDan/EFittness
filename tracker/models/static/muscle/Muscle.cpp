@@ -4,6 +4,7 @@
 
 #include "Muscle.h"
 
+
 int Muscle::getId() const {
     return id;
 }
@@ -30,3 +31,6 @@ void Muscle::setWorkedBy(const std::vector<Exercise> &workedBy) {
 
 Muscle::Muscle(int id, const std::string &name, const std::vector<Exercise> &workedBy)
     : id(id), name(name), workedBy(workedBy) {}
+
+Muscle::Muscle() {}
+
