@@ -34,12 +34,19 @@ public:
     std::string toJson();
 
     MealTimestamp(const pqxx::row& row);
-    MealTimestamp(int id, int userId, const std::string &description, const std::string& datetime, int carbs, int fats, int protein, int weight, int calories);
+    MealTimestamp(int id, int userId, std::string description,
+                  const std::string& datetime, int carbs, int fats, int protein, int weight, int calories);
+    MealTimestamp(int id, int userId, std::string description,
+                  std::chrono::system_clock::time_point datetime, int carbs, int fats, int protein, int weight, int calories);
     MealTimestamp();
 
     static std::string_view getTablename();
 
     picojson::value toJsonValue();
+
+    MealTimestamp operator+(const MealTimestamp& other) const;
+
+    MealTimestamp& operator+=(const MealTimestamp& other);
 };
 
 #endif //TRACKER_MEALTIMESTAMP_H

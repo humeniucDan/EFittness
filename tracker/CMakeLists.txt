@@ -26,6 +26,17 @@ add_executable(tracker
         repos/userhistoryrepo/userhistoryrepo.cpp
         repos/pqcred/pqcred.cpp
         repos/timelinerepos/abstracttimelinerepo/abstracttimelinerepo.cpp
+        logic/timelinefolds/timelinefolds.cpp
+        logic/timelinefolds/timelinefolds.h
+        logic/timelinefolds/timelinefolds.h
+        logic/timecheckers/timecheckers.cpp
+        logic/timecheckers/timecheckers.h
+        models/static/exercise/Exercise.cpp
+        models/static/exercise/Exercise.h
+        models/static/muscle/Muscle.cpp
+        models/static/muscle/Muscle.h
+        models/static/equipment/Equipment.cpp
+        models/static/equipment/Equipment.h
 )
 
 target_link_libraries(tracker PRIVATE Crow::Crow asio::asio)

@@ -11,6 +11,8 @@
 #include "../models/timestamps/userhistoryworkout/WorkoutTimestamp.h"
 #include "../repos/userhistoryrepo/userhistoryrepo.h"
 #include "../models/userhistory/UserHistory.h"
+#include "../logic/timecheckers/timecheckers.h"
+#include "../logic/timelinefolds/timelinefolds.h"
 
 //#include "../repos/timelinerepos/watertimelinerepo/watertimelinerepo.h"
 
@@ -37,6 +39,11 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                 }
 
                 UserHistory* userHistory = extractUserHistoryByUserId(id);
+
+                userHistory->setMeals(
+                        foldTimelineWith<MealTimestamp>(isSameDay, userHistory->getMeals())
+                        );
+
                 std::string jsonStr = userHistory->toJson();
                 delete userHistory;
 

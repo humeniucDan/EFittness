@@ -5,7 +5,7 @@
 #include "AbstractTimestamp.h"
 #include <format>
 #include <utility>
-//#define fmt "{:%Y-%m-%d %H:%M:%S}"
+#define DATE_FMT "%Y-%m-%d %H:%M:%S"
 
 int AbstractTimestamp::getId() const {
     return id;
@@ -57,7 +57,7 @@ void AbstractTimestamp::addToJson(picojson::object& jsonObject) {
 
     std::time_t date_time_t = std::chrono::system_clock::to_time_t(datetime);
     std::ostringstream oss;
-    oss << std::put_time(std::localtime(&date_time_t), "%Y-%m-%d %H:%M:%S");
+    oss << std::put_time(std::localtime(&date_time_t), DATE_FMT);
     jsonObject["datetime"] = picojson::value(oss.str());
 }
 
@@ -68,3 +68,7 @@ const std::chrono::system_clock::time_point &AbstractTimestamp::getDatetime() co
 void AbstractTimestamp::setDatetime(const std::chrono::system_clock::time_point &datetime) {
     AbstractTimestamp::datetime = datetime;
 }
+
+AbstractTimestamp::AbstractTimestamp(int id, int userId, std::string description,
+                                     const std::chrono::system_clock::time_point datetime)
+                                     : id(id), userId(userId), description(std::move(description)), datetime(datetime) {}

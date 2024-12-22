@@ -33,7 +33,7 @@ std::vector<T> extractTimelineByUserId(int userId) {
         }
         pqxx::work txn(conn);
 
-        pqxx::result res = txn.exec("SELECT * FROM efitness." + std::string(T::getTablename()) + " WHERE userId = " + txn.quote(userId));
+        pqxx::result res = txn.exec("SELECT * FROM efitness." + std::string(T::getTablename()) + " WHERE userId = " + txn.quote(userId) + "order by datetime asc;");
 
         std::vector<T> Timeline(res.size());
         for (int i = 0; i < res.size(); i++) {

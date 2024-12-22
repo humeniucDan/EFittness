@@ -20,6 +20,7 @@ private:
 
 public:
     AbstractTimestamp(int id, int userId, std::string description, const std::string& datetime);
+    AbstractTimestamp(int id, int userId, std::string description, const std::chrono::system_clock::time_point datetime);
     AbstractTimestamp(const pqxx::row&);
     AbstractTimestamp();
 

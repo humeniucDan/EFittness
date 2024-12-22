@@ -50,7 +50,8 @@ std::string_view MealTimestamp::getTablename() {
 MealTimestamp::MealTimestamp(const pqxx::row& row)
         : AbstractTimestamp(row), carbs(row["carbs"].as<int>()), fats(row["fats"].as<int>()), protein(row["protein"].as<int>()), weight(row["weight"].as<int>()), calories(row["calories"].as<int>()) {}
 
-MealTimestamp::MealTimestamp(int id, int userId, const std::string &description, const std::string& datetime, int carbs, int fats, int protein, int weight, int calories)
+MealTimestamp::MealTimestamp(int id, int userId, std::string description,
+                             const std::string& datetime, int carbs, int fats, int protein, int weight, int calories)
         : AbstractTimestamp(id, userId, description , datetime), carbs(carbs), fats(fats), protein(protein), weight(weight), calories(calories) {}
 
 MealTimestamp::MealTimestamp() {}
@@ -68,4 +69,32 @@ picojson::value MealTimestamp::toJsonValue() {
 
 std::string MealTimestamp::toJson()  {
     return toJsonValue().serialize();
+}
+
+MealTimestamp::MealTimestamp(int id, int userId, std::string description,
+                             const std::chrono::system_clock::time_point datetime, int carbs, int fats, int protein, int weight, int calories)
+        : AbstractTimestamp(id, userId, description , datetime), carbs(carbs), fats(fats), protein(protein), weight(weight), calories(calories) {}
+
+MealTimestamp MealTimestamp::operator+(const MealTimestamp& other) const {
+    return MealTimestamp(
+            this->getId(),
+            this->getUserId(),
+            this->getDescription() + ", " + other.getDescription(),
+            this->getDatetime(),
+            this->carbs + other.carbs,
+            this->fats + other.fats,
+            this->protein + other.protein,
+            this->weight + other.weight,
+            this->calories + other.calories
+    );
+}
+
+MealTimestamp& MealTimestamp::operator+=(const MealTimestamp& other) {
+    this->carbs += other.carbs;
+    this->fats += other.fats;
+    this->protein += other.protein;
+    this->weight += other.weight;
+    this->calories += other.calories;
+    this->setDescription(this->getDescription() + ", " + other.getDescription());
+    return *this;
 }
