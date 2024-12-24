@@ -46,6 +46,8 @@ add_executable(tracker
         repos/staticrepos/equipmentrepo/equipmentrepo.cpp
         repos/staticrepos/equipmentrepo/equipmentrepo.h
         repos/staticrepos/equipmentrepo/equipmentrepo.h
+        repos/staticrepos/msuclesrepo/musclesrepo.cpp
+        repos/staticrepos/msuclesrepo/musclesrepo.h
 )
 
 target_link_libraries(tracker PRIVATE Crow::Crow asio::asio)

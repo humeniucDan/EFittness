@@ -34,19 +34,11 @@ Equipment::Equipment(int id, const std::string &name, const std::vector<Exercise
 
 Equipment::Equipment() {}
 
-//picojson::object Equipment::toJson() const {
-//    picojson::object obj;
-//    obj["id"] = picojson::value(static_cast<double>(id));
-//    obj["name"] = picojson::value(name);
-//
-//    picojson::array exercisesArray;
-//    for (const auto& exercise : usedIn) {
-//        exercisesArray.push_back(picojson::value(exercise.toJson()));
-//    }
-//    obj["usedIn"] = picojson::value(exercisesArray);
-//
-//    return obj;
-//}
+std::string Equipment::toJson() {
+    picojson::object obj;
+    addToJson(obj);
+    return picojson::value(obj).serialize();
+}
 
 void Equipment::addToJson(picojson::object &j) {
     j["id"] = picojson::value(static_cast<double>(id));

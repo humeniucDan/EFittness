@@ -48,4 +48,12 @@ std::string Muscle::toJson() {
 void Muscle::addToJson(picojson::object &obj) {
     obj["id"] = picojson::value(static_cast<double>(this->id));
     obj["name"] = picojson::value(this->name);
+
+    picojson::array exercisesArray;
+    for (auto& exercise : workedBy) {
+        picojson::object exerciseJson;
+        exercise.addToJson(exerciseJson);
+        exercisesArray.push_back(picojson::value(exerciseJson));
+    }
+    obj["workedBy"] = picojson::value(exercisesArray);
 }

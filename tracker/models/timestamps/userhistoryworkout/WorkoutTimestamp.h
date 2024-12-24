@@ -16,7 +16,8 @@ private:
     int weight;
     Exercise exercise;
 
-    constexpr static std::string_view tableName = "workout_timeline";
+    constexpr static std::string_view tableName = "workout_timeline w\n"
+                                                  "join efitness.exercises e on w.exerciseid = e.id";
 public:
 
     int getExerciseId() const;

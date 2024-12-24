@@ -18,4 +18,6 @@ std::string extractExerciseNameById(int id);
 
 Exercise extractCascadedExerciseById(int id);
 
+Exercise extractCascadedExercises();
+
 #endif //TRACKER_EXERCISEREPO_H

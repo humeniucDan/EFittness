@@ -26,11 +26,10 @@ UserHistory* extractUserHistoryByUserId(int id){
     }
 
     std::vector<WorkoutTimestamp> workoutTimeline = extractTimelineByUserId<WorkoutTimestamp>(conn, id);
-    /// add exercise names to the timeline
-    for (auto& workout: workoutTimeline){
-        workout.setExercise(
-                extractExerciseById(conn, workout.getExerciseId())
-                );
+    for(auto& workout: workoutTimeline){
+        Exercise e = workout.getExercise();
+        e.setId(workout.getExerciseId());
+        workout.setExercise(e);
     }
 
     return new UserHistory(
