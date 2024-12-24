@@ -1,13 +1,10 @@
-//
-// Created by koath on 12/22/2024.
-//
-
 #ifndef TRACKER_EQUIPMENT_H
 #define TRACKER_EQUIPMENT_H
 
 #include <string>
 #include <vector>
 #include "../exercise/Exercise.h"
+#include <picojson/picojson.h>
 
 class Exercise;
 
@@ -31,6 +28,11 @@ public:
     void setUsedIn(const std::vector<Exercise> &usedIn);
 
     Equipment(int id, const std::string &name, const std::vector<Exercise> &usedIn);
+
+    Equipment();
+
+    std::string toJson();
+    void addToJson(picojson::object& j);
 };
 
 

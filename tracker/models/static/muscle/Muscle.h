@@ -8,11 +8,14 @@
 #include <string>
 #include <vector>
 #include "../exercise/Exercise.h"
+#include "pqxx/pqxx"
+#include "picojson/picojson.h"
 
 class Exercise;
 
 class Muscle {
 private:
+
     int id;
     std::string name;
     std::vector<Exercise> workedBy;
@@ -31,7 +34,15 @@ public:
 
     Muscle(int id, const std::string &name, const std::vector<Exercise> &workedBy);
 
+    Muscle(const pqxx::row& row);
+
     Muscle();
+
+    std::string toJson();
+
+    void addToJson(picojson::object &obj);
+
+//    Muscle(pqxx::row row1);
 };
 
 

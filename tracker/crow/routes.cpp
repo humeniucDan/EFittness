@@ -13,6 +13,7 @@
 #include "../models/userhistory/UserHistory.h"
 #include "../logic/timecheckers/timecheckers.h"
 #include "../logic/timelinefolds/timelinefolds.h"
+#include "../repos/staticrepos/exereciserepo/exerciserepo.h"
 
 //#include "../repos/timelinerepos/watertimelinerepo/watertimelinerepo.h"
 
@@ -27,8 +28,6 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                     std::cout << "Invalid\n";
                     return crow::response(401, "Invalid token");
                 }
-
-                std::string retStr = "";
 
                 auto decoded_token = jwt::decode(jwToken);
 
@@ -46,6 +45,29 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 
                 std::string jsonStr = userHistory->toJson();
                 delete userHistory;
+
+                return crow::response(200, jsonStr);
+            });
+    CROW_ROUTE(app, "/exercise/<int>").methods("GET"_method)
+            ([&app](const crow::request& req, int exerciseId){
+//                auto& ctx = app.get_context<crow::CookieParser>(req);
+//                std::string jwToken = ctx.get_cookie("jwToken");
+//
+//                if(!validateJwToken(jwToken)){
+//                    std::cout << "Invalid\n";
+//                    return crow::response(401, "Invalid token");
+//                }
+//
+//                auto decoded_token = jwt::decode(jwToken);
+//
+//                int id;
+//                // Extract the "email" claim
+//                if (decoded_token.has_payload_claim("_id")) {
+//                    id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
+//                }
+
+                Exercise exercise = extractCascadedExerciseById(exerciseId);
+                std::string jsonStr = exercise.toJson();
 
                 return crow::response(200, jsonStr);
             });

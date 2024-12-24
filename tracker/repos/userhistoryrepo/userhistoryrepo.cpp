@@ -4,16 +4,39 @@
 
 #include "userhistoryrepo.h"
 #include "../timelinerepos/abstracttimelinerepo/abstracttimelinerepo.h"
+#include "../staticrepos/exereciserepo/exerciserepo.h"
 #include "pqxx/pqxx"
 
 UserHistory* extractUserHistoryByUserId(int id){
     /// TODO: maybe use a connection pool
     /// TODO: extract the workout timeline and add exercise names to the timeline
     /// or redo the timeline to include the exercise name
+
+    pqxx::connection conn(
+            "dbname=" + DB_NAME +
+            " user=" + USER +
+            " password=" + PASSWORD +
+            " host=" + HOST +
+            " port=" + PORT
+    );
+    if (!conn.is_open()) {
+        std::cerr << "Failed to connect to database." << std::endl;
+        // maybe return an empty vector
+        return {};
+    }
+
+    std::vector<WorkoutTimestamp> workoutTimeline = extractTimelineByUserId<WorkoutTimestamp>(conn, id);
+    /// add exercise names to the timeline
+    for (auto& workout: workoutTimeline){
+        workout.setExercise(
+                extractExerciseById(conn, workout.getExerciseId())
+                );
+    }
+
     return new UserHistory(
-            extractTimelineByUserId<WorkoutTimestamp>(id), //extractWorkoutTimelineByUserId(id),
-            extractTimelineByUserId<MealTimestamp>(id), //extractMealsTimelineByUserId(id),
-            extractTimelineByUserId<CardioTimestamp>(id),  //extractCardioTimelineByUserId(id)
-            extractTimelineByUserId<WaterTimestamp>(id) //extractWaterTimelineByUserId(id)
+            workoutTimeline, //extractWorkoutTimelineByUserId(id),
+            extractTimelineByUserId<MealTimestamp>(conn, id), //extractMealsTimelineByUserId(id),
+            extractTimelineByUserId<CardioTimestamp>(conn, id),  //extractCardioTimelineByUserId(id)
+            extractTimelineByUserId<WaterTimestamp>(conn, id) //extractWaterTimelineByUserId(id)
     );
 }

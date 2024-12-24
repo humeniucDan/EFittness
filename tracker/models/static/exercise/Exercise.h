@@ -10,6 +10,8 @@
 #include <vector>
 #include "../muscle/Muscle.h"
 #include "../equipment/Equipment.h"
+#include "pqxx/pqxx"
+#include "picojson/picojson.h"
 
 class Muscle;
 class Equipment;
@@ -57,13 +59,19 @@ public:
 
     void setSteps(const std::string &steps);
 
-    void setPrimaryMuscle1(Muscle *primaryMuscle);
+    void setPrimaryMuscle(Muscle *primaryMuscle);
 
     Exercise(int id, const std::string &name, const std::string &primer, const std::string &type, Muscle *primaryMuscle,
              const std::string &steps, const std::vector<Muscle> &secondaryMuscles,
              const std::vector<Equipment> &neededEquipment);
 
+    Exercise(const pqxx::row& row);
+
     Exercise();
+
+    std::string toJson();
+
+    void addToJson(picojson::object& jsonObj);
 };
 
 

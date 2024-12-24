@@ -4,6 +4,7 @@
 
 #include "Exercise.h"
 #include "../muscle/Muscle.h"
+#include "picojson/picojson.h"
 
 int Exercise::getId() const {
     return id;
@@ -31,10 +32,6 @@ void Exercise::setPrimer(const std::string &primer) {
 
 const std::vector<Muscle> &Exercise::getSecondaryMuscles() const {
     return secondaryMuscles;
-}
-
-void Exercise::setSecondaryMuscles(const std::vector<Muscle> &workedMuscles) {
-    Exercise::secondaryMuscles = workedMuscles;
 }
 
 const std::vector<Equipment> &Exercise::getNeededEquipment() const {
@@ -70,6 +67,48 @@ Exercise::Exercise(int id, const std::string &name, const std::string &primer, c
                                                                     secondaryMuscles(secondaryMuscles),
                                                                     neededEquipment(neededEquipment) {}
 
-void Exercise::setPrimaryMuscle1(Muscle *primaryMuscle) {
+void Exercise::setPrimaryMuscle(Muscle *primaryMuscle) {
     Exercise::primaryMuscle = primaryMuscle;
+}
+
+Exercise::Exercise(const pqxx::row& row) {
+    id = row["id"].as<int>();
+    name = row["name"].as<std::string>();
+    primer = row["primer"].as<std::string>();
+    type = row["type"].as<std::string>();
+    steps = row["steps"].as<std::string>();
+    // Assuming primaryMuscle, secondaryMuscles, and neededEquipment are populated elsewhere
+}
+std::string Exercise::toJson() {
+    picojson::object obj;
+    addToJson(obj);
+    return picojson::value(obj).serialize();
+}
+
+void Exercise::addToJson(picojson::object& jsonObj) {
+    jsonObj["id"] = picojson::value(static_cast<double>(id));
+    jsonObj["name"] = picojson::value(name);
+    jsonObj["primer"] = picojson::value(primer);
+    jsonObj["type"] = picojson::value(type);
+    jsonObj["steps"] = picojson::value(steps);
+
+    picojson::array musclesArray;
+    for (auto& muscle : secondaryMuscles) {
+        picojson::object muscleObj;
+        muscle.addToJson(muscleObj);
+        musclesArray.push_back(picojson::value(muscleObj));
+    }
+    jsonObj["secondaryMuscles"] = picojson::value(musclesArray);
+
+    picojson::array equipmentArray;
+    for (auto& equipment : neededEquipment) {
+        picojson::object equipmentObj;
+        equipment.addToJson(equipmentObj);
+        equipmentArray.push_back(picojson::value(equipmentObj));
+    }
+    jsonObj["equipmentNeeded"] = picojson::value(equipmentArray);
+}
+
+void Exercise::setSecondaryMuscles(const std::vector<Muscle> &workedMuscles) {
+    this->secondaryMuscles = workedMuscles;
 }

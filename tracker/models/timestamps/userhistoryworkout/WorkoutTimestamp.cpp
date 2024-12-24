@@ -1,7 +1,6 @@
 #include "WorkoutTimestamp.h"
 #include <picojson/picojson.h>
 
-const std::string WorkoutTimestamp::tableName = "workout_timeline";
 
 int WorkoutTimestamp::getExerciseId() const {
     return exerciseId;
@@ -28,7 +27,7 @@ void WorkoutTimestamp::setWeight(int weight) {
 }
 
 std::string_view WorkoutTimestamp::getTablename() {
-    return WorkoutTimestamp::tableName;
+    return tableName;
 }
 
 WorkoutTimestamp::WorkoutTimestamp(const pqxx::row& row)
@@ -45,5 +44,16 @@ std::string WorkoutTimestamp::toJson() {
     jsonObject["exerciseId"] = picojson::value(static_cast<double>(exerciseId));
     jsonObject["reps"] = picojson::value(static_cast<double>(reps));
     jsonObject["weight"] = picojson::value(static_cast<double>(weight));
+    picojson::object exerciseJsonObj;
+    exercise.addToJson(exerciseJsonObj);
+    jsonObject["exercise"] = picojson::value(exerciseJsonObj);
     return picojson::value(jsonObject).serialize();
+}
+
+const Exercise &WorkoutTimestamp::getExercise() const {
+    return exercise;
+}
+
+void WorkoutTimestamp::setExercise(const Exercise &exercise) {
+    WorkoutTimestamp::exercise = exercise;
 }

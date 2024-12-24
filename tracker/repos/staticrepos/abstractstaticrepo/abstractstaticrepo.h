@@ -1,0 +1,10 @@
+//
+// Created by koath on 12/23/2024.
+//
+
+#ifndef TRACKER_ABSTRACTSTATICREPO_H
+#define TRACKER_ABSTRACTSTATICREPO_H
+
+
+
+#endif //TRACKER_ABSTRACTSTATICREPO_H

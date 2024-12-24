@@ -6,11 +6,16 @@
 #define TRACKER_EXERCISEREPO_H
 
 #include "../../../models/static/exercise/Exercise.h"
-
+#include "../../../models/static/muscle/Muscle.h"
 #include "../../pqcred/pqcred.h"
 
-Exercise getExerciseById(int id);
+Exercise extractExerciseById(int id);
+Exercise extractExerciseById(pqxx::connection&, int id);
 
-Exercise getCascadedExerciseById(int id);
+std::string extractExerciseNameById(int id);
+
+[[maybe_unused]] std::string extractExerciseNameById(pqxx::connection conn, int id);
+
+Exercise extractCascadedExerciseById(int id);
 
 #endif //TRACKER_EXERCISEREPO_H

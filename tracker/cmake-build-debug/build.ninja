@@ -211,6 +211,24 @@ build CMakeFiles\tracker.dir\repos\staticrepos\exereciserepo\exerciserepo.cpp.ob
   TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
   TARGET_PDB = tracker.pdb
 
+build CMakeFiles\tracker.dir\repos\staticrepos\abstractstaticrepo\abstractstaticrepo.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\repos\staticrepos\abstractstaticrepo\abstractstaticrepo.cpp || cmake_object_order_depends_target_tracker
+  DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\tracker.dir
+  OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\staticrepos\abstractstaticrepo
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
+
+build CMakeFiles\tracker.dir\repos\staticrepos\equipmentrepo\equipmentrepo.cpp.obj: CXX_COMPILER__tracker_unscanned_Debug C$:\UTCN\an3\sem1\is\proj\tracker\repos\staticrepos\equipmentrepo\equipmentrepo.cpp || cmake_object_order_depends_target_tracker
+  DEFINES = -DASIO_STANDALONE -DPQXX_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
+  INCLUDES = -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-windows\include -IC:\UTCN\an3\sem1\is\proj\tracker\vcpkg_installed\x64-linux\include -external:IC:\UTCN\an3\sem1\is\proj\tracker\cmake-build-debug\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\tracker.dir
+  OBJECT_FILE_DIR = CMakeFiles\tracker.dir\repos\staticrepos\equipmentrepo
+  TARGET_COMPILE_PDB = CMakeFiles\tracker.dir\
+  TARGET_PDB = tracker.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target tracker
@@ -219,7 +237,7 @@ build CMakeFiles\tracker.dir\repos\staticrepos\exereciserepo\exerciserepo.cpp.ob
 #############################################
 # Link the executable tracker.exe
 
-build tracker.exe: CXX_EXECUTABLE_LINKER__tracker_Debug CMakeFiles\tracker.dir\main.cpp.obj CMakeFiles\tracker.dir\crow\routes.cpp.obj CMakeFiles\tracker.dir\jsonwebtoken\jwtvalidation\jwtvalidation.cpp.obj CMakeFiles\tracker.dir\models\userhistory\UserHistory.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistorywater\WaterTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistorymeal\MealTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistoryworkout\WorkoutTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\abstracttimestamp\AbstractTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistorycardio\CardioTimestamp.cpp.obj CMakeFiles\tracker.dir\repos\userhistoryrepo\userhistoryrepo.cpp.obj CMakeFiles\tracker.dir\repos\pqcred\pqcred.cpp.obj CMakeFiles\tracker.dir\repos\timelinerepos\abstracttimelinerepo\abstracttimelinerepo.cpp.obj CMakeFiles\tracker.dir\logic\timelinefolds\timelinefolds.cpp.obj CMakeFiles\tracker.dir\logic\timecheckers\timecheckers.cpp.obj CMakeFiles\tracker.dir\models\static\exercise\Exercise.cpp.obj CMakeFiles\tracker.dir\models\static\muscle\Muscle.cpp.obj CMakeFiles\tracker.dir\models\static\equipment\Equipment.cpp.obj CMakeFiles\tracker.dir\repos\staticrepos\exereciserepo\exerciserepo.cpp.obj | vcpkg_installed\x64-windows\debug\lib\pqxx.lib vcpkg_installed\x64-windows\debug\lib\libssl.lib vcpkg_installed\x64-windows\debug\lib\libcrypto.lib
+build tracker.exe: CXX_EXECUTABLE_LINKER__tracker_Debug CMakeFiles\tracker.dir\main.cpp.obj CMakeFiles\tracker.dir\crow\routes.cpp.obj CMakeFiles\tracker.dir\jsonwebtoken\jwtvalidation\jwtvalidation.cpp.obj CMakeFiles\tracker.dir\models\userhistory\UserHistory.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistorywater\WaterTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistorymeal\MealTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistoryworkout\WorkoutTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\abstracttimestamp\AbstractTimestamp.cpp.obj CMakeFiles\tracker.dir\models\timestamps\userhistorycardio\CardioTimestamp.cpp.obj CMakeFiles\tracker.dir\repos\userhistoryrepo\userhistoryrepo.cpp.obj CMakeFiles\tracker.dir\repos\pqcred\pqcred.cpp.obj CMakeFiles\tracker.dir\repos\timelinerepos\abstracttimelinerepo\abstracttimelinerepo.cpp.obj CMakeFiles\tracker.dir\logic\timelinefolds\timelinefolds.cpp.obj CMakeFiles\tracker.dir\logic\timecheckers\timecheckers.cpp.obj CMakeFiles\tracker.dir\models\static\exercise\Exercise.cpp.obj CMakeFiles\tracker.dir\models\static\muscle\Muscle.cpp.obj CMakeFiles\tracker.dir\models\static\equipment\Equipment.cpp.obj CMakeFiles\tracker.dir\repos\staticrepos\exereciserepo\exerciserepo.cpp.obj CMakeFiles\tracker.dir\repos\staticrepos\abstractstaticrepo\abstractstaticrepo.cpp.obj CMakeFiles\tracker.dir\repos\staticrepos\equipmentrepo\equipmentrepo.cpp.obj | vcpkg_installed\x64-windows\debug\lib\pqxx.lib vcpkg_installed\x64-windows\debug\lib\libssl.lib vcpkg_installed\x64-windows\debug\lib\libcrypto.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = vcpkg_installed\x64-windows\debug\lib\pqxx.lib  wsock32.lib  ws2_32.lib  vcpkg_installed\x64-windows\debug\lib\libssl.lib  vcpkg_installed\x64-windows\debug\lib\libcrypto.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
