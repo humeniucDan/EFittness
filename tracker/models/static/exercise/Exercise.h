@@ -51,7 +51,7 @@ public:
 
     void setType(const std::string &type);
 
-    const Muscle* &getPrimaryMuscle() const;
+    const Muscle* getPrimaryMuscle() const;
 
     void setPrimaryMuscle(const Muscle* &primaryMuscle);
 

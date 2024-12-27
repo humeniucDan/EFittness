@@ -68,6 +68,7 @@ Exercise::Exercise(int id, const std::string &name, const std::string &primer, c
                                                                     neededEquipment(neededEquipment) {}
 
 void Exercise::setPrimaryMuscle(Muscle *primaryMuscle) {
+    std::cout << "Setting primary muscle\n";
     Exercise::primaryMuscle = primaryMuscle;
 }
 
@@ -77,6 +78,10 @@ Exercise::Exercise(const pqxx::row& row) {
     primer = row["primer"].as<std::string>();
     type = row["type"].as<std::string>();
     steps = row["steps"].as<std::string>();
+    try {
+        primaryMuscle = new Muscle(row["m_id"].as<int>(), row["m_name"].as<std::string>(), {});
+        std::cout << "Primary muscle assigned here\n" << std::endl;
+    } catch (const std::exception& e) {}
     // Assuming primaryMuscle, secondaryMuscles, and neededEquipment are populated elsewhere
 }
 std::string Exercise::toJson() {
@@ -91,6 +96,7 @@ void Exercise::addToJson(picojson::object& jsonObj) {
     jsonObj["primer"] = picojson::value(primer);
     jsonObj["type"] = picojson::value(type);
     jsonObj["steps"] = picojson::value(steps);
+    jsonObj["primaryMuscle"] = picojson::value(primaryMuscle->toJson());
 
     picojson::array musclesArray;
     for (auto& muscle : secondaryMuscles) {
@@ -112,3 +118,12 @@ void Exercise::addToJson(picojson::object& jsonObj) {
 void Exercise::setSecondaryMuscles(const std::vector<Muscle> &workedMuscles) {
     this->secondaryMuscles = workedMuscles;
 }
+
+const Muscle* Exercise::getPrimaryMuscle() const {
+    return primaryMuscle;
+}
+
+//Exercise::~Exercise() {
+//    std::cout << "Deleting primary muscle\n";
+//    delete primaryMuscle;
+//}

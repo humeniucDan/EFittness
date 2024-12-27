@@ -31,12 +31,12 @@ add_executable(tracker
         logic/timelinefolds/timelinefolds.h
         logic/timecheckers/timecheckers.cpp
         logic/timecheckers/timecheckers.h
-        models/static/exercise/Exercise.cpp
-        models/static/exercise/Exercise.h
         models/static/muscle/Muscle.cpp
         models/static/muscle/Muscle.h
         models/static/equipment/Equipment.cpp
         models/static/equipment/Equipment.h
+        models/static/exercise/Exercise.cpp
+        models/static/exercise/Exercise.h
         repos/staticrepos/exereciserepo/exerciserepo.cpp
         repos/staticrepos/exereciserepo/exerciserepo.h
         repos/staticrepos/exereciserepo/exerciserepo.h

@@ -16,6 +16,7 @@
 #include "../repos/staticrepos/exereciserepo/exerciserepo.h"
 #include "../repos/staticrepos/equipmentrepo/equipmentrepo.h"
 #include "../repos/staticrepos/msuclesrepo/musclesrepo.h"
+#include "pqxx/pqxx"
 
 //using Session = crow::SessionMiddleware<crow::FileStore>;
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
@@ -50,9 +51,10 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
             });
     CROW_ROUTE(app, "/exercise/<int>").methods("GET"_method)
             ([&app](const crow::request& req, int exerciseId){
-
                 Exercise exercise = extractCascadedExerciseById(exerciseId);
                 std::string jsonStr = exercise.toJson();
+
+                delete exercise.getPrimaryMuscle();
 
                 return crow::response(200, jsonStr);
             });

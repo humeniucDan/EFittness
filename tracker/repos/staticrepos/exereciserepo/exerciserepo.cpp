@@ -31,7 +31,11 @@ Exercise extractExerciseById(pqxx::connection& conn, int id) {
         pqxx::work txn(conn);
 
         pqxx::result res = txn.exec(
-                "SELECT * FROM efitness.exercises WHERE id = " + txn.quote(id) + ";");
+                "select e.*, m.id as m_id, m.name as m_name\n"
+                "from efitness.exercises e\n"
+                "join efitness.muscles m on e.primary_muscle = m.id\n"
+                "where e.id = " + txn.quote(id) + ";"
+                );
 
         if( res.empty() ) return {};
         if( res.size() > 1 ) {
@@ -73,16 +77,16 @@ Exercise extractCascadedExerciseById(int id) {
                 "SELECT m.* FROM efitness.secondary s join efitness.muscles m on s.muscle = m.id where s.exercise = " + txn->quote(id) + ";"
                         );
         txn->commit();
-        delete txn;
 
         std::cout << res.size() << std::endl;
         std::vector<Muscle> muscles(res.size());
         for (int i = 0; i < res.size(); i++) {
 //            muscles.push_back(Muscle(row));
-            muscles[i] = Muscle(res[i]);
+            muscles[i] = Muscle(res[i]["id"].as<int>(), res[i]["name"].as<std::string>(), {});
         }
         exercise.setSecondaryMuscles(muscles);
 
+        delete txn;
         txn = new pqxx::work(conn);
 
         res = txn->exec(
@@ -98,6 +102,8 @@ Exercise extractCascadedExerciseById(int id) {
             equipment[i] = Equipment(res[i]["id"].as<int>(), res[i]["name"].as<std::string>(), {});
         }
         exercise.setNeededEquipment(equipment);
+
+        delete txn;
 
         return exercise;
 

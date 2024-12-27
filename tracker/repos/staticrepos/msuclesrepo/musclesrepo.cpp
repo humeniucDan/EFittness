@@ -51,11 +51,11 @@ Muscle extractCascadedMuscleById(int id) {
         pqxx::work txn(conn);
 
         pqxx::result res = txn.exec(
-                "SELECT e.*\n"
-                "FROM efitness.secondary s\n"
-                "join efitness.exercises e on s.exercise = e.id\n"
-                "where s.muscle = " + txn.quote(id) + "\n"
-                ";"
+                "SELECT distinct e.*\n"
+                "FROM efitness.muscles m \n"
+                "join efitness.secondary s on s.muscle = m.id\n"
+                "join efitness.exercises e on (e.primary_muscle = m.id or e.id = s.exercise) \n"
+                "where m.id = " + txn.quote(id) + ";"
         );
 
 

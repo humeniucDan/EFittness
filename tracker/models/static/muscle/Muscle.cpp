@@ -37,6 +37,8 @@ Muscle::Muscle() {}
 Muscle::Muscle(const pqxx::row& row) {
     this->id = row["id"].as<int>();
     this->name = row["name"].as<std::string>();
+    this->workedBy = std::vector<Exercise>(1);
+    this->workedBy[0] = Exercise(row);
 }
 
 std::string Muscle::toJson() {
