@@ -37,6 +37,7 @@ public:
     void addToJson(picojson::object&);
 
     static std::string_view getTablename();
+    std::string getSQLInsertQuery(int userId);
 };
 
 

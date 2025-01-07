@@ -9,6 +9,7 @@
 #include "pqxx/pqxx"
 #include <iostream>
 #include "../../pqcred/pqcred.h"
+#include "../../../models/timestamps/abstracttimestamp/AbstractTimestamp.h"
 
 template <typename T>
 std::vector<T> extractTimelineByUserId(int userId) {
@@ -68,6 +69,29 @@ std::vector<T> extractTimelineByUserId(pqxx::connection &conn, int userId) {
     } catch (const std::exception &e) {
         std::cerr << "Error: " << e.what() << std::endl;
         return {};
+    }
+}
+
+void insertTimeStamp(int userId, AbstractTimestamp& timestamp){
+    try {
+        // Establish a connection to the database
+        pqxx::connection conn(
+                "dbname=" + DB_NAME +
+                " user=" + USER +
+                " password=" + PASSWORD +
+                " host=" + HOST +
+                " port=" + PORT
+        );
+        if (!conn.is_open()) {
+            std::cerr << "Failed to connect to database." << std::endl;
+        }
+        pqxx::work txn(conn);
+
+        pqxx::result res = txn.exec(timestamp.getSQLInsertQuery(userId));
+
+        txn.commit();
+    } catch (const std::exception &e) {
+        std::cerr << "Error: " << e.what() << std::endl;
     }
 }
 

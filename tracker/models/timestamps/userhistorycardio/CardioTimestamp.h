@@ -16,7 +16,9 @@ private:
     int intensity;
     int distance;
 
+
     constexpr static std::string_view tableName = "cardio_timeline";
+    constexpr static std::string_view insertQuery = "insert into efitness.cardio_timeline(userid, description, exerciseid, intensity, distance, datetime) values (";
 
 public:
     int getExerciseId() const;
@@ -40,6 +42,8 @@ public:
     CardioTimestamp();
 
     static std::string_view getTablename();
+
+    std::string getSQLInsertQuery(int userId);
 };
 
 

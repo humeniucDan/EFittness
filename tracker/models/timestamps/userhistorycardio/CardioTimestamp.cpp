@@ -49,3 +49,14 @@ std::string CardioTimestamp::toJson() {
     return picojson::value(jsonObject).serialize();
 }
 
+std::string CardioTimestamp::getSQLInsertQuery(int userId) {
+    return std::string(CardioTimestamp::insertQuery) +
+            std::to_string(userId) + "," +
+            "\"" + this->getDescription() + "\"" +
+            std::to_string(this->exerciseId) + "," +
+            std::to_string(this->intensity) + "," +
+            std::to_string(this->distance) + ")"
+//            std::to_string(this.) // todo figure this out
+            ;
+}
+

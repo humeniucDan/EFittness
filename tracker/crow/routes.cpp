@@ -74,6 +74,10 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 
                 return crow::response(200, jsonStr);
             });
+    CROW_ROUTE(app, "timeline/cardios").methods("POST"_method)
+            ([&app](const crow::request& req){
+                return crow::response(200, "ok");
+            });
 //    CROW_ROUTE(app, "/exercise").methods("GET"_method)
 //            ([&app](const crow::request& req){
 //
