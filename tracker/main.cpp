@@ -5,11 +5,12 @@
 #include <crow/middlewares/session.h>
 
 #include "crow/routes.h"
+#include <crow/middlewares/cors.h>
 
 int main() {
 
 //    using Session = crow::SessionMiddleware<crow::FileStore>;
-    crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> app{crow::SessionMiddleware<crow::FileStore>{
+    crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>, crow::CORSHandler> app{crow::SessionMiddleware<crow::FileStore>{
             crow::FileStore{"/tmp/sessiondata"}
     }};
     startRoutes(app);

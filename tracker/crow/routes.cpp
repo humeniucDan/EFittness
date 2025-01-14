@@ -18,8 +18,10 @@
 #include "../repos/staticrepos/msuclesrepo/musclesrepo.h"
 #include "pqxx/pqxx"
 
+#include <crow/middlewares/cors.h>
+
 //using Session = crow::SessionMiddleware<crow::FileStore>;
-void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
+void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>, crow::CORSHandler> &app){
     CROW_ROUTE(app, "/").methods("GET"_method)
             ([&app](const crow::request& req){
                 auto& ctx = app.get_context<crow::CookieParser>(req);
@@ -77,8 +79,8 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 //    CROW_ROUTE(app, "/exercise").methods("GET"_method)
 //            ([&app](const crow::request& req){
 //
-////                Exercise exercise = extractCascadedExercises();
-////                std::string jsonStr = exercise.toJson();
+//                Exercise exercise = extractCascadedExercises();
+//                std::string jsonStr = exercise.toJson();
 //
 //                return crow::response(200, "jsonStr");
 //            });

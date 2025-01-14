@@ -7,3 +7,6 @@
 11	3678	7551817135584104	CMakeFiles/userdata.dir/jsonwebtoken/jwtvalidation/jwtvalidation.cpp.obj	68f8c5114b71a40
 20	6830	7553662192671457	CMakeFiles/userdata.dir/crow/routes.cpp.obj	52d8edf1a3031573
 22	2268	7552084846884452	CMakeFiles/userdata.dir/models/UserData/UserData.cpp.obj	39adda968bb37538
+4	6425	7585837181658349	CMakeFiles/userdata.dir/crow/routes.cpp.obj	52d8edf1a3031573
+8	7023	7585837187621815	CMakeFiles/userdata.dir/main.cpp.obj	7fbe1d1aae8b0a5d
+7023	7905	7585837191454605	userdata.exe	ef2ff9e16960b49b
