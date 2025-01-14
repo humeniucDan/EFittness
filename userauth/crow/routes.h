@@ -10,8 +10,9 @@
 #include "crow/middlewares/session.h"
 
 #include "../zeromq/zeromq.h"
+#include "crow/middlewares/cors.h"
 
 //using Session = crow::SessionMiddleware<crow::FileStore>;
-void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app);
+void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>, crow::CORSHandler> &app);
 
 #endif //USERAUTH_ROUTES_H

@@ -22,6 +22,7 @@
 #include <crow.h>
 #include <crow/middlewares/cookie_parser.h>
 #include <crow/middlewares/session.h>
+#include <crow/middlewares/cors.h>
 
 #include "signup/signup.h"
 
@@ -32,9 +33,19 @@ int main() {
     mongocxx::instance inst{};
 
 //    using Session = crow::SessionMiddleware<crow::FileStore>;
-    crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> app{crow::SessionMiddleware<crow::FileStore>{
+    crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>, crow::CORSHandler> app{crow::SessionMiddleware<crow::FileStore>{
             crow::FileStore{"/tmp/sessiondata"}
     }};
+
+//    auto& appCors = app.get_middleware<crow::CORSHandler>();
+//    appCors
+//        .global()
+//            .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
+//            .methods("POST"_method, "GET"_method)
+//        .prefix("/cors")
+//            .origin("example.com")
+//        .prefix("/nocors")
+//            .ignore();
 
     setCurrentHighestId();
 
