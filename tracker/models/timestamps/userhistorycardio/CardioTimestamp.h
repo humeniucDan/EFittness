@@ -39,7 +39,11 @@ public:
 
     CardioTimestamp();
 
+    CardioTimestamp(std::string json);
+
     static std::string_view getTablename();
+
+    std::string getSQLInsertQuery(int userId) override;
 };
 
 

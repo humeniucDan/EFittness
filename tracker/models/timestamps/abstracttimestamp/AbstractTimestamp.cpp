@@ -72,3 +72,8 @@ void AbstractTimestamp::setDatetime(const std::chrono::system_clock::time_point 
 AbstractTimestamp::AbstractTimestamp(int id, int userId, std::string description,
                                      const std::chrono::system_clock::time_point datetime)
                                      : id(id), userId(userId), description(std::move(description)), datetime(datetime) {}
+
+std::string AbstractTimestamp::getSQLInsertQuery(int userId) {
+    return "non-callable abstract method invocation";
+}
+

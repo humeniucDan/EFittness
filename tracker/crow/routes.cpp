@@ -75,6 +75,28 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 
                 return crow::response(200, jsonStr);
             });
+    CROW_ROUTE(app, "/cardioTimestamp").methods("POST"_method)
+            ([&app](const crow::request& req){
+                auto& ctx = app.get_context<crow::CookieParser>(req);
+                std::string jwToken = ctx.get_cookie("jwToken");
+
+                if(!validateJwToken(jwToken)){
+                    std::cout << "Invalid\n";
+                    return crow::response(401, "Invalid token");
+                }
+
+                auto decoded_token = jwt::decode(jwToken);
+
+                int id;
+                if (decoded_token.has_payload_claim("_id")) {
+                    id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
+                }
+
+                CardioTimestamp cardioTimestamp(req.body);
+//                insertAbstractTimestamp();
+
+                return crow::response(200, "ok");
+            });
 //    CROW_ROUTE(app, "/exercise").methods("GET"_method)
 //            ([&app](const crow::request& req){
 //

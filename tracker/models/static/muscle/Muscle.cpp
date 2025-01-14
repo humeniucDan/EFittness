@@ -52,10 +52,12 @@ void Muscle::addToJson(picojson::object &obj) {
     obj["name"] = picojson::value(this->name);
 
     picojson::array exercisesArray;
-    for (auto& exercise : workedBy) {
+    for (Exercise& exercise : workedBy) {
         picojson::object exerciseJson;
         exercise.addToJson(exerciseJson);
         exercisesArray.push_back(picojson::value(exerciseJson));
     }
     obj["workedBy"] = picojson::value(exercisesArray);
+
+    return;
 }

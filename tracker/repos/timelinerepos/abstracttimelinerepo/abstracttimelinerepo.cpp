@@ -41,3 +41,27 @@
 //    }
 //}
 
+void insertAbstractTimestamp(int userId, AbstractTimestamp &abstractTimestamp) {
+    try {
+        // Establish a connection to the database
+        pqxx::connection conn(
+                "dbname=" + DB_NAME +
+                " user=" + USER +
+                " password=" + PASSWORD +
+                " host=" + HOST +
+                " port=" + PORT
+        );
+        if (!conn.is_open()) {
+            std::cerr << "Failed to connect to database." << std::endl;
+            // maybe return an empty vector
+        }
+        pqxx::work txn(conn);
+
+        pqxx::result res = txn.exec(abstractTimestamp.getSQLInsertQuery(userId));
+
+        txn.commit();
+
+    } catch (const std::exception &e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+}

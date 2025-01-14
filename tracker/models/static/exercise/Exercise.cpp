@@ -96,7 +96,7 @@ void Exercise::addToJson(picojson::object& jsonObj) {
     jsonObj["primer"] = picojson::value(primer);
     jsonObj["type"] = picojson::value(type);
     jsonObj["steps"] = picojson::value(steps);
-    jsonObj["primaryMuscle"] = picojson::value(primaryMuscle->toJson());
+//    jsonObj["primaryMuscle"] = picojson::value(primaryMuscle->toJson());
 
     picojson::array musclesArray;
     for (auto& muscle : secondaryMuscles) {

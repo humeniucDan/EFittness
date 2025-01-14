@@ -33,6 +33,6 @@ libpqxx provides pkg-config modules:
   libpqxx
 
 -- Running vcpkg install - done
--- Configuring done (3.0s)
+-- Configuring done (4.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/UTCN/an3/sem1/is/proj/tracker/cmake-build-debug

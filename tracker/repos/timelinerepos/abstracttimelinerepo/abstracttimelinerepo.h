@@ -9,6 +9,7 @@
 #include "pqxx/pqxx"
 #include <iostream>
 #include "../../pqcred/pqcred.h"
+#include "../../../models/timestamps/abstracttimestamp/AbstractTimestamp.h"
 
 template <typename T>
 std::vector<T> extractTimelineByUserId(int userId) {
@@ -70,5 +71,7 @@ std::vector<T> extractTimelineByUserId(pqxx::connection &conn, int userId) {
         return {};
     }
 }
+
+void insertAbstractTimestamp(int userId, AbstractTimestamp& abstractTimestamp);
 
 #endif //TRACKER_ABSTRACTTIMELINEREPO_H
