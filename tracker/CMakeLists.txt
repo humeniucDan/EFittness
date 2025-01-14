@@ -48,6 +48,8 @@ add_executable(tracker
         repos/staticrepos/equipmentrepo/equipmentrepo.h
         repos/staticrepos/msuclesrepo/musclesrepo.cpp
         repos/staticrepos/msuclesrepo/musclesrepo.h
+        logic/timeformaters/timeformater.cpp
+        logic/timeformaters/timeformater.h
 )
 
 target_link_libraries(tracker PRIVATE Crow::Crow asio::asio)

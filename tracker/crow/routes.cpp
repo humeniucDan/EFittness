@@ -93,7 +93,7 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                 }
 
                 CardioTimestamp cardioTimestamp(req.body);
-//                insertAbstractTimestamp();
+                insertAbstractTimestamp(id, cardioTimestamp);
 
                 return crow::response(200, "ok");
             });
