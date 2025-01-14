@@ -3,20 +3,21 @@
 //
 
 #include "routes.h"
-#include "../jsonwebtoken/jwtvalidation/jwtvalidation.h"
-#include "../repos/timelinerepos/abstracttimelinerepo/abstracttimelinerepo.h"
+
 #include "../models/timestamps/userhistorywater/WaterTimestamp.h"
 #include "../models/timestamps/userhistorycardio/CardioTimestamp.h"
 #include "../models/timestamps/userhistorymeal/MealTimestamp.h"
 #include "../models/timestamps/userhistoryworkout/WorkoutTimestamp.h"
 #include "../repos/userhistoryrepo/userhistoryrepo.h"
-#include "../models/userhistory/UserHistory.h"
 #include "../logic/timecheckers/timecheckers.h"
 #include "../logic/timelinefolds/timelinefolds.h"
 #include "../repos/staticrepos/exereciserepo/exerciserepo.h"
 #include "../repos/staticrepos/equipmentrepo/equipmentrepo.h"
 #include "../repos/staticrepos/msuclesrepo/musclesrepo.h"
+#include "../jsonwebtoken/jwtvalidation/jwtvalidation.h"
 #include "pqxx/pqxx"
+
+
 
 //using Session = crow::SessionMiddleware<crow::FileStore>;
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
@@ -32,11 +33,10 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 
                 auto decoded_token = jwt::decode(jwToken);
 
-                int id;
-                // Extract the "email" claim
-                if (decoded_token.has_payload_claim("_id")) {
-                    id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
-                }
+                int id = 1;
+//                if (decoded_token.has_payload_claim("_id")) {
+//                    id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
+//                }
 
                 UserHistory* userHistory = extractUserHistoryByUserId(id);
 
@@ -74,10 +74,10 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 
                 return crow::response(200, jsonStr);
             });
-    CROW_ROUTE(app, "timeline/cardios").methods("POST"_method)
-            ([&app](const crow::request& req){
-                return crow::response(200, "ok");
-            });
+//    CROW_ROUTE(app, "/timeline/cardios").methods("GET"_method)
+//            ([&app](const crow::request& req){
+//                return crow::response(200, "ok");
+//            });
 //    CROW_ROUTE(app, "/exercise").methods("GET"_method)
 //            ([&app](const crow::request& req){
 //
