@@ -13,7 +13,7 @@
 
 ///TODO: REFACTOR ROUTES
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>> &app){
-    CROW_ROUTE(app, "/").methods("GET"_method)
+    CROW_ROUTE(app, "/").methods("POST"_method)
             ([&app](const crow::request& req){
                 auto& ctx = app.get_context<crow::CookieParser>(req);
                 std::string jwToken = ctx.get_cookie("jwToken");
@@ -24,14 +24,14 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                 return crow::response(200, retStr);
             });
 
-    CROW_ROUTE(app, "/logout").methods("GET"_method)
+    CROW_ROUTE(app, "/logout").methods("POST"_method)
             ([](const crow::request& req){
                 crow::response rsp(200, "Logged out!");
                 rsp.add_header("Set-Cookie", "jwToken=");
                 return rsp;
             });
 
-    CROW_ROUTE(app, "/login").methods("GET"_method)
+    CROW_ROUTE(app, "/login").methods("POST"_method)
             ([](const crow::request& req){
                 std::string token;
                 try {
