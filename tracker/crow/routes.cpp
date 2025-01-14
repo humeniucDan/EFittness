@@ -35,7 +35,6 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                 auto decoded_token = jwt::decode(jwToken);
 
                 int id;
-                // Extract the "email" claim
                 if (decoded_token.has_payload_claim("_id")) {
                     id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
                 }
