@@ -1,18 +1,17 @@
-# Resolve paths
-$userauthPath = "userauth\cmake-build-debug\userauth.exe"
-$userdataPath = "userdata\cmake-build-debug\userdata.exe"
-# $userdataPath = "(Resolve-Path ".\userdata\cmake-build-debug\userdata.exe").Path"
+$executables = @(
+        "userauth\cmake-build-debug\userauth.exe", 
+        "userdata\cmake-build-debug\userdata.exe", 
+        "tracker\cmake-build-debug\tracker.exe")
 
-# Check if files exist
-if (-Not (Test-Path $userdataPath)) {
-    Write-Host "Error: userdata.exe not found at $userdataPath"
-    exit 1
-}
-if (-Not (Test-Path $userauthPath)) {
-    Write-Host "Error: userauth.exe not found at $userauthPath"
-    exit 1
+Write-Host "Checking executable paths..."
+foreach ($exe in $executables) {
+    if (-Not (Test-Path $exe)) {
+        Write-Host "Error: $(Split-Path -Leaf $exe) not found at $exe"
+        exit 1
+    }
 }
 
-# Start processes
-Start-Process -FilePath $userauthPath
-Start-Process -FilePath $userdataPath
+Write-Host "Starting apps..."
+foreach ($exe in $executables) {
+    Start-Process -FilePath $exe
+}

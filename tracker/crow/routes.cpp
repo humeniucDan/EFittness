@@ -74,12 +74,12 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
 
                 return crow::response(200, jsonStr);
             });
-//    CROW_ROUTE(app, "/exercise").methods("GET"_method)
-//            ([&app](const crow::request& req){
-//
-////                Exercise exercise = extractCascadedExercises();
-////                std::string jsonStr = exercise.toJson();
-//
-//                return crow::response(200, "jsonStr");
-//            });
+    CROW_ROUTE(app, "/exercise").methods("GET"_method)
+            ([&app](const crow::request& req){
+
+                Exercise exercise = extractCascadedExercises();
+                std::string jsonStr = exercise.toJson();
+
+                return crow::response(200, "jsonStr");
+            });
 }
