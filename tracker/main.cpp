@@ -13,6 +13,15 @@ int main() {
     crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>, crow::CORSHandler> app{crow::SessionMiddleware<crow::FileStore>{
             crow::FileStore{"/tmp/sessiondata"}
     }};
+
+    auto& cors = app.get_middleware<crow::CORSHandler>();
+    cors
+            .global()
+            .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
+            .methods("POST"_method, "GET"_method)
+//            .prefix("/")
+            .origin("localhost");
+
     startRoutes(app);
 
     //set the port, set the app to run on multiple threads, and run the app
