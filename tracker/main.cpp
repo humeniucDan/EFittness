@@ -17,11 +17,10 @@ int main() {
 auto& cors = app.get_middleware<crow::CORSHandler>();
 cors
     .global()
-    .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
+//    .ignore();
+    .headers("Allow", "X-Custom-Header", "Upgrade-Insecure-Requests")
     .methods("POST"_method, "GET"_method, "PUT"_method, "DELETE"_method, "OPTIONS"_method)
     .origin("*");
-
-
 
     startRoutes(app);
 

@@ -25,24 +25,24 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
     CROW_ROUTE(app, "/").methods("GET"_method)
             ([&app](const crow::request& req){
                 int id = 9;
-//                try {
-//                    auto &ctx = app.get_context<crow::CookieParser>(req);
-//                    std::string jwToken = ctx.get_cookie("jwToken");
-//
-//                    if (!validateJwToken(jwToken)) {
-//                        std::cout << "Invalid\n";
-//                        return crow::response(401, "Invalid token");
-//                    }
-//
-//                    auto decoded_token = jwt::decode(jwToken);
-//                    if (decoded_token.has_payload_claim("_id")) {
-//                        id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
-//                    }
-//
-//                } catch (const std::exception& e) {
-//                    std::cerr << e.what() << std::endl;
-//                    return crow::response(401, "Invalid token");
-//                }
+                try {
+                    auto &ctx = app.get_context<crow::CookieParser>(req);
+                    std::string jwToken = ctx.get_cookie("jwToken");
+
+                    if (!validateJwToken(jwToken)) {
+                        std::cout << "Invalid\n";
+                        return crow::response(401, "Invalid token");
+                    }
+
+                    auto decoded_token = jwt::decode(jwToken);
+                    if (decoded_token.has_payload_claim("_id")) {
+                        id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
+                    }
+
+                } catch (const std::exception& e) {
+                    std::cerr << e.what() << std::endl;
+                    return crow::response(401, "Invalid token");
+                }
 
                 UserHistory* userHistory = extractUserHistoryByUserId(id);
 
@@ -53,7 +53,15 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                 std::string jsonStr = userHistory->toJson();
                 delete userHistory;
 
-                return crow::response(200, jsonStr);
+                auto res = crow::response(200, jsonStr);
+
+//                res.set_header("Access-Control-Allow-Origin", "*"); // Allow requests from all origins
+                res.set_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS"); // Allow specific HTTP methods
+                res.set_header("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+                res.set_header("Access-Control-Allow-Credentials", "true"); // If credentials are needed
+                res.set_header("Access-Control-Allow-Origin", "http://localhost:3000");
+
+                return res;
             });
     CROW_ROUTE(app, "/exercise/<int>").methods("GET"_method)
             ([&app](const crow::request& req, int exerciseId){
