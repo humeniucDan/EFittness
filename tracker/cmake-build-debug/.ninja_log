@@ -58,3 +58,8 @@
 9	1190	7585961207966284	CMakeFiles/tracker.dir/logic/timeformaters/timeformater.cpp.obj	1d666e5936e3e8c8
 6	2018	7585961216222406	CMakeFiles/tracker.dir/models/timestamps/userhistorycardio/CardioTimestamp.cpp.obj	59e1a2c958c2ef81
 2018	2671	7585961218568127	tracker.exe	275e5b7e81a251ee
+18	2042	7586638321510391	CMakeFiles/tracker.dir/logic/timeformaters/timeformater.cpp.obj	1d666e5936e3e8c8
+10	3156	7586638332640057	CMakeFiles/tracker.dir/models/timestamps/userhistorycardio/CardioTimestamp.cpp.obj	59e1a2c958c2ef81
+3157	4346	7586638335830170	tracker.exe	275e5b7e81a251ee
+7	6494	7586644995118219	CMakeFiles/tracker.dir/crow/routes.cpp.obj	2e14861e29193e2
+6495	7153	7586644997309130	tracker.exe	275e5b7e81a251ee

@@ -24,19 +24,24 @@
 void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::FileStore>, crow::CORSHandler> &app){
     CROW_ROUTE(app, "/").methods("GET"_method)
             ([&app](const crow::request& req){
-                auto& ctx = app.get_context<crow::CookieParser>(req);
-                std::string jwToken = ctx.get_cookie("jwToken");
-
-                if(!validateJwToken(jwToken)){
-                    std::cout << "Invalid\n";
-                    return crow::response(401, "Invalid token");
-                }
-
-                auto decoded_token = jwt::decode(jwToken);
-
                 int id;
-                if (decoded_token.has_payload_claim("_id")) {
-                    id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
+                try {
+                    auto &ctx = app.get_context<crow::CookieParser>(req);
+                    std::string jwToken = ctx.get_cookie("jwToken");
+
+                    if (!validateJwToken(jwToken)) {
+                        std::cout << "Invalid\n";
+                        return crow::response(401, "Invalid token");
+                    }
+
+                    auto decoded_token = jwt::decode(jwToken);
+                    if (decoded_token.has_payload_claim("_id")) {
+                        id = std::stoi(decoded_token.get_payload_claim("_id").as_string());
+                    }
+
+                } catch (const std::exception& e) {
+                    std::cerr << e.what() << std::endl;
+                    return crow::response(401, "Invalid token");
                 }
 
                 UserHistory* userHistory = extractUserHistoryByUserId(id);
