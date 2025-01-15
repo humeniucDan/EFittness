@@ -17,10 +17,9 @@ int main() {
 auto& cors = app.get_middleware<crow::CORSHandler>();
 cors
     .global()
-//    .ignore();
-    .headers("Allow", "X-Custom-Header", "Upgrade-Insecure-Requests")
-    .methods("POST"_method, "GET"_method, "PUT"_method, "DELETE"_method, "OPTIONS"_method)
-    .origin("*");
+    .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
+    .methods("POST"_method, "GET"_method)
+    .origin("http://localhost:3000");
 
     startRoutes(app);
 

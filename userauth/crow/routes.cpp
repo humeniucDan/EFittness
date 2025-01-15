@@ -22,6 +22,7 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                 std::string retStr = validateJwToken(jwToken) ? "Valid" : "Invalid";
 
                 produce(std::string());
+
                 return crow::response(200, retStr);
             });
 
@@ -42,10 +43,12 @@ void startRoutes(crow::App<crow::CookieParser, crow::SessionMiddleware<crow::Fil
                         // TODO: handle exceptions
                     }
                 }
-                crow::response rsp(200, token);
-                rsp.add_header("Set-Cookie", "jwToken="+token);
+                crow::response res(200, token);
+                res.add_header("Set-Cookie", "jwToken="+token);
+                res.set_header("Access-Control-Allow-Credentials", "true"); // If credentials are needed
+                res.set_header("Access-Control-Allow-Origin", "http://localhost:3000");
 
-                return rsp;
+                return res;
             });
 
     CROW_ROUTE(app, "/signup").methods("POST"_method)

@@ -37,15 +37,12 @@ int main() {
             crow::FileStore{"/tmp/sessiondata"}
     }};
 
-//    auto& appCors = app.get_middleware<crow::CORSHandler>();
-//    appCors
-//        .global()
-//            .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
-//            .methods("POST"_method, "GET"_method)
-//        .prefix("/cors")
-//            .origin("example.com")
-//        .prefix("/nocors")
-//            .ignore();
+    auto& appCors = app.get_middleware<crow::CORSHandler>();
+    appCors
+        .global()
+        .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
+        .methods("POST"_method, "GET"_method)
+        .origin("http://localhost:3000");
 
     setCurrentHighestId();
 
